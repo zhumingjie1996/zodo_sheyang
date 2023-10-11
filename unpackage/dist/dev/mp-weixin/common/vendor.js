@@ -9645,617 +9645,7 @@ uni.addInterceptor({
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */
-/*!****************************!*\
-  !*** D:/zodo/api/login.js ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _request = _interopRequireDefault(__webpack_require__(/*! @/request.js */ 45));
-var _default = {
-  login: function login(params) {
-    return params;
-  }
-};
-exports.default = _default;
-
-/***/ }),
-/* 45 */
-/*!**************************!*\
-  !*** D:/zodo/request.js ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */
-/*!****************************************************************!*\
-  !*** D:/zodo/uni_modules/uview-ui/components/u-input/props.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 输入的值
-    value: {
-      type: [String, Number],
-      default: uni.$u.props.input.value
-    },
-    // 输入框类型
-    // number-数字输入键盘，app-vue下可以输入浮点数，app-nvue和小程序平台下只能输入整数
-    // idcard-身份证输入键盘，微信、支付宝、百度、QQ小程序
-    // digit-带小数点的数字键盘，App的nvue页面、微信、支付宝、百度、头条、QQ小程序
-    // text-文本输入键盘
-    type: {
-      type: String,
-      default: uni.$u.props.input.type
-    },
-    // 如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true，
-    // 兼容性：微信小程序、百度小程序、字节跳动小程序、QQ小程序
-    fixed: {
-      type: Boolean,
-      default: uni.$u.props.input.fixed
-    },
-    // 是否禁用输入框
-    disabled: {
-      type: Boolean,
-      default: uni.$u.props.input.disabled
-    },
-    // 禁用状态时的背景色
-    disabledColor: {
-      type: String,
-      default: uni.$u.props.input.disabledColor
-    },
-    // 是否显示清除控件
-    clearable: {
-      type: Boolean,
-      default: uni.$u.props.input.clearable
-    },
-    // 是否密码类型
-    password: {
-      type: Boolean,
-      default: uni.$u.props.input.password
-    },
-    // 最大输入长度，设置为 -1 的时候不限制最大长度
-    maxlength: {
-      type: [String, Number],
-      default: uni.$u.props.input.maxlength
-    },
-    // 	输入框为空时的占位符
-    placeholder: {
-      type: String,
-      default: uni.$u.props.input.placeholder
-    },
-    // 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/
-    placeholderClass: {
-      type: String,
-      default: uni.$u.props.input.placeholderClass
-    },
-    // 指定placeholder的样式
-    placeholderStyle: {
-      type: [String, Object],
-      default: uni.$u.props.input.placeholderStyle
-    },
-    // 是否显示输入字数统计，只在 type ="text"或type ="textarea"时有效
-    showWordLimit: {
-      type: Boolean,
-      default: uni.$u.props.input.showWordLimit
-    },
-    // 设置右下角按钮的文字，有效值：send|search|next|go|done，兼容性详见uni-app文档
-    // https://uniapp.dcloud.io/component/input
-    // https://uniapp.dcloud.io/component/textarea
-    confirmType: {
-      type: String,
-      default: uni.$u.props.input.confirmType
-    },
-    // 点击键盘右下角按钮时是否保持键盘不收起，H5无效
-    confirmHold: {
-      type: Boolean,
-      default: uni.$u.props.input.confirmHold
-    },
-    // focus时，点击页面的时候不收起键盘，微信小程序有效
-    holdKeyboard: {
-      type: Boolean,
-      default: uni.$u.props.input.holdKeyboard
-    },
-    // 自动获取焦点
-    // 在 H5 平台能否聚焦以及软键盘是否跟随弹出，取决于当前浏览器本身的实现。nvue 页面不支持，需使用组件的 focus()、blur() 方法控制焦点
-    focus: {
-      type: Boolean,
-      default: uni.$u.props.input.focus
-    },
-    // 键盘收起时，是否自动失去焦点，目前仅App3.0.0+有效
-    autoBlur: {
-      type: Boolean,
-      default: uni.$u.props.input.autoBlur
-    },
-    // 是否去掉 iOS 下的默认内边距，仅微信小程序，且type=textarea时有效
-    disableDefaultPadding: {
-      type: Boolean,
-      default: uni.$u.props.input.disableDefaultPadding
-    },
-    // 指定focus时光标的位置
-    cursor: {
-      type: [String, Number],
-      default: uni.$u.props.input.cursor
-    },
-    // 输入框聚焦时底部与键盘的距离
-    cursorSpacing: {
-      type: [String, Number],
-      default: uni.$u.props.input.cursorSpacing
-    },
-    // 光标起始位置，自动聚集时有效，需与selection-end搭配使用
-    selectionStart: {
-      type: [String, Number],
-      default: uni.$u.props.input.selectionStart
-    },
-    // 光标结束位置，自动聚集时有效，需与selection-start搭配使用
-    selectionEnd: {
-      type: [String, Number],
-      default: uni.$u.props.input.selectionEnd
-    },
-    // 键盘弹起时，是否自动上推页面
-    adjustPosition: {
-      type: Boolean,
-      default: uni.$u.props.input.adjustPosition
-    },
-    // 输入框内容对齐方式，可选值为：left|center|right
-    inputAlign: {
-      type: String,
-      default: uni.$u.props.input.inputAlign
-    },
-    // 输入框字体的大小
-    fontSize: {
-      type: [String, Number],
-      default: uni.$u.props.input.fontSize
-    },
-    // 输入框字体颜色
-    color: {
-      type: String,
-      default: uni.$u.props.input.color
-    },
-    // 输入框前置图标
-    prefixIcon: {
-      type: String,
-      default: uni.$u.props.input.prefixIcon
-    },
-    // 前置图标样式，对象或字符串
-    prefixIconStyle: {
-      type: [String, Object],
-      default: uni.$u.props.input.prefixIconStyle
-    },
-    // 输入框后置图标
-    suffixIcon: {
-      type: String,
-      default: uni.$u.props.input.suffixIcon
-    },
-    // 后置图标样式，对象或字符串
-    suffixIconStyle: {
-      type: [String, Object],
-      default: uni.$u.props.input.suffixIconStyle
-    },
-    // 边框类型，surround-四周边框，bottom-底部边框，none-无边框
-    border: {
-      type: String,
-      default: uni.$u.props.input.border
-    },
-    // 是否只读，与disabled不同之处在于disabled会置灰组件，而readonly则不会
-    readonly: {
-      type: Boolean,
-      default: uni.$u.props.input.readonly
-    },
-    // 输入框形状，circle-圆形，square-方形
-    shape: {
-      type: String,
-      default: uni.$u.props.input.shape
-    },
-    // 用于处理或者过滤输入框内容的方法
-    formatter: {
-      type: [Function, null],
-      default: uni.$u.props.input.formatter
-    },
-    // 是否忽略组件内对文本合成系统事件的处理
-    ignoreCompositionEvent: {
-      type: Boolean,
-      default: true
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */
-/*!***************************************************************!*\
-  !*** D:/zodo/uni_modules/uview-ui/components/u-icon/icons.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  'uicon-level': "\uE693",
-  'uicon-column-line': "\uE68E",
-  'uicon-checkbox-mark': "\uE807",
-  'uicon-folder': "\uE7F5",
-  'uicon-movie': "\uE7F6",
-  'uicon-star-fill': "\uE669",
-  'uicon-star': "\uE65F",
-  'uicon-phone-fill': "\uE64F",
-  'uicon-phone': "\uE622",
-  'uicon-apple-fill': "\uE881",
-  'uicon-chrome-circle-fill': "\uE885",
-  'uicon-backspace': "\uE67B",
-  'uicon-attach': "\uE632",
-  'uicon-cut': "\uE948",
-  'uicon-empty-car': "\uE602",
-  'uicon-empty-coupon': "\uE682",
-  'uicon-empty-address': "\uE646",
-  'uicon-empty-favor': "\uE67C",
-  'uicon-empty-permission': "\uE686",
-  'uicon-empty-news': "\uE687",
-  'uicon-empty-search': "\uE664",
-  'uicon-github-circle-fill': "\uE887",
-  'uicon-rmb': "\uE608",
-  'uicon-person-delete-fill': "\uE66A",
-  'uicon-reload': "\uE788",
-  'uicon-order': "\uE68F",
-  'uicon-server-man': "\uE6BC",
-  'uicon-search': "\uE62A",
-  'uicon-fingerprint': "\uE955",
-  'uicon-more-dot-fill': "\uE630",
-  'uicon-scan': "\uE662",
-  'uicon-share-square': "\uE60B",
-  'uicon-map': "\uE61D",
-  'uicon-map-fill': "\uE64E",
-  'uicon-tags': "\uE629",
-  'uicon-tags-fill': "\uE651",
-  'uicon-bookmark-fill': "\uE63B",
-  'uicon-bookmark': "\uE60A",
-  'uicon-eye': "\uE613",
-  'uicon-eye-fill': "\uE641",
-  'uicon-mic': "\uE64A",
-  'uicon-mic-off': "\uE649",
-  'uicon-calendar': "\uE66E",
-  'uicon-calendar-fill': "\uE634",
-  'uicon-trash': "\uE623",
-  'uicon-trash-fill': "\uE658",
-  'uicon-play-left': "\uE66D",
-  'uicon-play-right': "\uE610",
-  'uicon-minus': "\uE618",
-  'uicon-plus': "\uE62D",
-  'uicon-info': "\uE653",
-  'uicon-info-circle': "\uE7D2",
-  'uicon-info-circle-fill': "\uE64B",
-  'uicon-question': "\uE715",
-  'uicon-error': "\uE6D3",
-  'uicon-close': "\uE685",
-  'uicon-checkmark': "\uE6A8",
-  'uicon-android-circle-fill': "\uE67E",
-  'uicon-android-fill': "\uE67D",
-  'uicon-ie': "\uE87B",
-  'uicon-IE-circle-fill': "\uE889",
-  'uicon-google': "\uE87A",
-  'uicon-google-circle-fill': "\uE88A",
-  'uicon-setting-fill': "\uE872",
-  'uicon-setting': "\uE61F",
-  'uicon-minus-square-fill': "\uE855",
-  'uicon-plus-square-fill': "\uE856",
-  'uicon-heart': "\uE7DF",
-  'uicon-heart-fill': "\uE851",
-  'uicon-camera': "\uE7D7",
-  'uicon-camera-fill': "\uE870",
-  'uicon-more-circle': "\uE63E",
-  'uicon-more-circle-fill': "\uE645",
-  'uicon-chat': "\uE620",
-  'uicon-chat-fill': "\uE61E",
-  'uicon-bag-fill': "\uE617",
-  'uicon-bag': "\uE619",
-  'uicon-error-circle-fill': "\uE62C",
-  'uicon-error-circle': "\uE624",
-  'uicon-close-circle': "\uE63F",
-  'uicon-close-circle-fill': "\uE637",
-  'uicon-checkmark-circle': "\uE63D",
-  'uicon-checkmark-circle-fill': "\uE635",
-  'uicon-question-circle-fill': "\uE666",
-  'uicon-question-circle': "\uE625",
-  'uicon-share': "\uE631",
-  'uicon-share-fill': "\uE65E",
-  'uicon-shopping-cart': "\uE621",
-  'uicon-shopping-cart-fill': "\uE65D",
-  'uicon-bell': "\uE609",
-  'uicon-bell-fill': "\uE640",
-  'uicon-list': "\uE650",
-  'uicon-list-dot': "\uE616",
-  'uicon-zhihu': "\uE6BA",
-  'uicon-zhihu-circle-fill': "\uE709",
-  'uicon-zhifubao': "\uE6B9",
-  'uicon-zhifubao-circle-fill': "\uE6B8",
-  'uicon-weixin-circle-fill': "\uE6B1",
-  'uicon-weixin-fill': "\uE6B2",
-  'uicon-twitter-circle-fill': "\uE6AB",
-  'uicon-twitter': "\uE6AA",
-  'uicon-taobao-circle-fill': "\uE6A7",
-  'uicon-taobao': "\uE6A6",
-  'uicon-weibo-circle-fill': "\uE6A5",
-  'uicon-weibo': "\uE6A4",
-  'uicon-qq-fill': "\uE6A1",
-  'uicon-qq-circle-fill': "\uE6A0",
-  'uicon-moments-circel-fill': "\uE69A",
-  'uicon-moments': "\uE69B",
-  'uicon-qzone': "\uE695",
-  'uicon-qzone-circle-fill': "\uE696",
-  'uicon-baidu-circle-fill': "\uE680",
-  'uicon-baidu': "\uE681",
-  'uicon-facebook-circle-fill': "\uE68A",
-  'uicon-facebook': "\uE689",
-  'uicon-car': "\uE60C",
-  'uicon-car-fill': "\uE636",
-  'uicon-warning-fill': "\uE64D",
-  'uicon-warning': "\uE694",
-  'uicon-clock-fill': "\uE638",
-  'uicon-clock': "\uE60F",
-  'uicon-edit-pen': "\uE612",
-  'uicon-edit-pen-fill': "\uE66B",
-  'uicon-email': "\uE611",
-  'uicon-email-fill': "\uE642",
-  'uicon-minus-circle': "\uE61B",
-  'uicon-minus-circle-fill': "\uE652",
-  'uicon-plus-circle': "\uE62E",
-  'uicon-plus-circle-fill': "\uE661",
-  'uicon-file-text': "\uE663",
-  'uicon-file-text-fill': "\uE665",
-  'uicon-pushpin': "\uE7E3",
-  'uicon-pushpin-fill': "\uE86E",
-  'uicon-grid': "\uE673",
-  'uicon-grid-fill': "\uE678",
-  'uicon-play-circle': "\uE647",
-  'uicon-play-circle-fill': "\uE655",
-  'uicon-pause-circle-fill': "\uE654",
-  'uicon-pause': "\uE8FA",
-  'uicon-pause-circle': "\uE643",
-  'uicon-eye-off': "\uE648",
-  'uicon-eye-off-outline': "\uE62B",
-  'uicon-gift-fill': "\uE65C",
-  'uicon-gift': "\uE65B",
-  'uicon-rmb-circle-fill': "\uE657",
-  'uicon-rmb-circle': "\uE677",
-  'uicon-kefu-ermai': "\uE656",
-  'uicon-server-fill': "\uE751",
-  'uicon-coupon-fill': "\uE8C4",
-  'uicon-coupon': "\uE8AE",
-  'uicon-integral': "\uE704",
-  'uicon-integral-fill': "\uE703",
-  'uicon-home-fill': "\uE964",
-  'uicon-home': "\uE965",
-  'uicon-hourglass-half-fill': "\uE966",
-  'uicon-hourglass': "\uE967",
-  'uicon-account': "\uE628",
-  'uicon-plus-people-fill': "\uE626",
-  'uicon-minus-people-fill': "\uE615",
-  'uicon-account-fill': "\uE614",
-  'uicon-thumb-down-fill': "\uE726",
-  'uicon-thumb-down': "\uE727",
-  'uicon-thumb-up': "\uE733",
-  'uicon-thumb-up-fill': "\uE72F",
-  'uicon-lock-fill': "\uE979",
-  'uicon-lock-open': "\uE973",
-  'uicon-lock-opened-fill': "\uE974",
-  'uicon-lock': "\uE97A",
-  'uicon-red-packet-fill': "\uE690",
-  'uicon-photo-fill': "\uE98B",
-  'uicon-photo': "\uE98D",
-  'uicon-volume-off-fill': "\uE659",
-  'uicon-volume-off': "\uE644",
-  'uicon-volume-fill': "\uE670",
-  'uicon-volume': "\uE633",
-  'uicon-red-packet': "\uE691",
-  'uicon-download': "\uE63C",
-  'uicon-arrow-up-fill': "\uE6B0",
-  'uicon-arrow-down-fill': "\uE600",
-  'uicon-play-left-fill': "\uE675",
-  'uicon-play-right-fill': "\uE676",
-  'uicon-rewind-left-fill': "\uE679",
-  'uicon-rewind-right-fill': "\uE67A",
-  'uicon-arrow-downward': "\uE604",
-  'uicon-arrow-leftward': "\uE601",
-  'uicon-arrow-rightward': "\uE603",
-  'uicon-arrow-upward': "\uE607",
-  'uicon-arrow-down': "\uE60D",
-  'uicon-arrow-right': "\uE605",
-  'uicon-arrow-left': "\uE60E",
-  'uicon-arrow-up': "\uE606",
-  'uicon-skip-back-left': "\uE674",
-  'uicon-skip-forward-right': "\uE672",
-  'uicon-rewind-right': "\uE66F",
-  'uicon-rewind-left': "\uE671",
-  'uicon-arrow-right-double': "\uE68D",
-  'uicon-arrow-left-double': "\uE68C",
-  'uicon-wifi-off': "\uE668",
-  'uicon-wifi': "\uE667",
-  'uicon-empty-data': "\uE62F",
-  'uicon-empty-history': "\uE684",
-  'uicon-empty-list': "\uE68B",
-  'uicon-empty-page': "\uE627",
-  'uicon-empty-order': "\uE639",
-  'uicon-man': "\uE697",
-  'uicon-woman': "\uE69C",
-  'uicon-man-add': "\uE61C",
-  'uicon-man-add-fill': "\uE64C",
-  'uicon-man-delete': "\uE61A",
-  'uicon-man-delete-fill': "\uE66A",
-  'uicon-zh': "\uE70A",
-  'uicon-en': "\uE692"
-};
-exports.default = _default;
-
-/***/ }),
-/* 63 */
-/*!***************************************************************!*\
-  !*** D:/zodo/uni_modules/uview-ui/components/u-icon/props.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 图标类名
-    name: {
-      type: String,
-      default: uni.$u.props.icon.name
-    },
-    // 图标颜色，可接受主题色
-    color: {
-      type: String,
-      default: uni.$u.props.icon.color
-    },
-    // 字体大小，单位px
-    size: {
-      type: [String, Number],
-      default: uni.$u.props.icon.size
-    },
-    // 是否显示粗体
-    bold: {
-      type: Boolean,
-      default: uni.$u.props.icon.bold
-    },
-    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
-    index: {
-      type: [String, Number],
-      default: uni.$u.props.icon.index
-    },
-    // 触摸图标时的类名
-    hoverClass: {
-      type: String,
-      default: uni.$u.props.icon.hoverClass
-    },
-    // 自定义扩展前缀，方便用户扩展自己的图标库
-    customPrefix: {
-      type: String,
-      default: uni.$u.props.icon.customPrefix
-    },
-    // 图标右边或者下面的文字
-    label: {
-      type: [String, Number],
-      default: uni.$u.props.icon.label
-    },
-    // label的位置，只能右边或者下边
-    labelPos: {
-      type: String,
-      default: uni.$u.props.icon.labelPos
-    },
-    // label的大小
-    labelSize: {
-      type: [String, Number],
-      default: uni.$u.props.icon.labelSize
-    },
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: uni.$u.props.icon.labelColor
-    },
-    // label与图标的距离
-    space: {
-      type: [String, Number],
-      default: uni.$u.props.icon.space
-    },
-    // 图片的mode
-    imgMode: {
-      type: String,
-      default: uni.$u.props.icon.imgMode
-    },
-    // 用于显示图片小图标时，图片的宽度
-    width: {
-      type: [String, Number],
-      default: uni.$u.props.icon.width
-    },
-    // 用于显示图片小图标时，图片的高度
-    height: {
-      type: [String, Number],
-      default: uni.$u.props.icon.height
-    },
-    // 用于解决某些情况下，让图标垂直居中的用途
-    top: {
-      type: [String, Number],
-      default: uni.$u.props.icon.top
-    },
-    // 是否阻止事件传播
-    stop: {
-      type: Boolean,
-      default: uni.$u.props.icon.stop
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */
+/* 34 */
 /*!*********************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/index.js ***!
   \*********************************************/
@@ -10271,20 +9661,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 73));
-var _mpMixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpMixin.js */ 74));
-var _luchRequest = _interopRequireDefault(__webpack_require__(/*! ./libs/luch-request */ 75));
-var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/util/route.js */ 96));
-var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 97));
-var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 98));
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 99));
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 100));
-var _index = _interopRequireDefault(__webpack_require__(/*! ./libs/function/index.js */ 101));
-var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 104));
-var _props = _interopRequireDefault(__webpack_require__(/*! ./libs/config/props.js */ 105));
-var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 195));
-var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/config/color.js */ 153));
-var _platform = _interopRequireDefault(__webpack_require__(/*! ./libs/function/platform */ 196));
+var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 35));
+var _mpMixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpMixin.js */ 36));
+var _luchRequest = _interopRequireDefault(__webpack_require__(/*! ./libs/luch-request */ 37));
+var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/util/route.js */ 55));
+var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 59));
+var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 60));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 61));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 62));
+var _index = _interopRequireDefault(__webpack_require__(/*! ./libs/function/index.js */ 63));
+var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 66));
+var _props = _interopRequireDefault(__webpack_require__(/*! ./libs/config/props.js */ 67));
+var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 157));
+var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/config/color.js */ 115));
+var _platform = _interopRequireDefault(__webpack_require__(/*! ./libs/function/platform */ 158));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // 看到此报错，是因为没有配置vue.config.js的【transpileDependencies】，详见：https://www.uviewui.com/components/npmSetting.html#_5-cli模式额外配置
@@ -10344,7 +9734,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 73 */
+/* 35 */
 /*!********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/mixin/mixin.js ***!
   \********************************************************/
@@ -10512,7 +9902,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 74 */
+/* 36 */
 /*!**********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
   \**********************************************************/
@@ -10535,7 +9925,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 75 */
+/* 37 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/index.js ***!
   \***************************************************************/
@@ -10550,12 +9940,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 76));
+var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 38));
 var _default = _Request.default;
 exports.default = _default;
 
 /***/ }),
-/* 76 */
+/* 38 */
 /*!**********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
   \**********************************************************************/
@@ -10573,12 +9963,12 @@ exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 77));
-var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 85));
-var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 86));
-var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 90));
-var _utils = __webpack_require__(/*! ../utils */ 80);
-var _clone = _interopRequireDefault(__webpack_require__(/*! ../utils/clone */ 91));
+var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 39));
+var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 47));
+var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 48));
+var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 49));
+var _utils = __webpack_require__(/*! ../utils */ 42);
+var _clone = _interopRequireDefault(__webpack_require__(/*! ../utils/clone */ 50));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var Request = /*#__PURE__*/function () {
@@ -10761,7 +10151,7 @@ var Request = /*#__PURE__*/function () {
 exports.default = Request;
 
 /***/ }),
-/* 77 */
+/* 39 */
 /*!******************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
   \******************************************************************************/
@@ -10776,14 +10166,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 78));
+var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 40));
 var _default = function _default(config) {
   return (0, _index.default)(config);
 };
 exports.default = _default;
 
 /***/ }),
-/* 78 */
+/* 40 */
 /*!************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
   \************************************************************************/
@@ -10799,10 +10189,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 79));
-var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 81));
-var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 84));
-var _utils = __webpack_require__(/*! ../utils */ 80);
+var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 41));
+var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 43));
+var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 46));
+var _utils = __webpack_require__(/*! ../utils */ 42);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 /**
@@ -10864,7 +10254,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 79 */
+/* 41 */
 /*!**************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
   \**************************************************************************/
@@ -10879,7 +10269,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = buildURL;
-var utils = _interopRequireWildcard(__webpack_require__(/*! ../utils */ 80));
+var utils = _interopRequireWildcard(__webpack_require__(/*! ../utils */ 42));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function encode(val) {
@@ -10934,7 +10324,7 @@ function buildURL(url, params) {
 }
 
 /***/ }),
-/* 80 */
+/* 42 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/utils.js ***!
   \***************************************************************/
@@ -11087,7 +10477,7 @@ function isUndefined(val) {
 }
 
 /***/ }),
-/* 81 */
+/* 43 */
 /*!****************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
   \****************************************************************************/
@@ -11102,8 +10492,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = buildFullPath;
-var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 82));
-var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 83));
+var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 44));
+var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 45));
 /**
  * Creates a new URL by combining the baseURL with the requestedURL,
  * only when the requestedURL is not already an absolute URL.
@@ -11121,7 +10511,7 @@ function buildFullPath(baseURL, requestedURL) {
 }
 
 /***/ }),
-/* 82 */
+/* 44 */
 /*!*******************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
   \*******************************************************************************/
@@ -11149,7 +10539,7 @@ function isAbsoluteURL(url) {
 }
 
 /***/ }),
-/* 83 */
+/* 45 */
 /*!*****************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
   \*****************************************************************************/
@@ -11175,7 +10565,7 @@ function combineURLs(baseURL, relativeURL) {
 }
 
 /***/ }),
-/* 84 */
+/* 46 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
   \*********************************************************************/
@@ -11207,7 +10597,7 @@ function settle(resolve, reject, response) {
 }
 
 /***/ }),
-/* 85 */
+/* 47 */
 /*!*********************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
   \*********************************************************************************/
@@ -11271,7 +10661,7 @@ var _default = InterceptorManager;
 exports.default = _default;
 
 /***/ }),
-/* 86 */
+/* 48 */
 /*!**************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
   \**************************************************************************/
@@ -11287,7 +10677,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _utils = __webpack_require__(/*! ../utils */ 80);
+var _utils = __webpack_require__(/*! ../utils */ 42);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 /**
@@ -11347,381 +10737,7 @@ var _default = function _default(globalsConfig) {
 exports.default = _default;
 
 /***/ }),
-/* 87 */
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// TODO(Babel 8): Remove this file.
-
-var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 88)();
-module.exports = runtime;
-
-/***/ }),
-/* 88 */
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-function _regeneratorRuntime() {
-  "use strict";
-
-  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
-    return exports;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  var exports = {},
-    Op = Object.prototype,
-    hasOwn = Op.hasOwnProperty,
-    defineProperty = Object.defineProperty || function (obj, key, desc) {
-      obj[key] = desc.value;
-    },
-    $Symbol = "function" == typeof Symbol ? Symbol : {},
-    iteratorSymbol = $Symbol.iterator || "@@iterator",
-    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
-    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-  function define(obj, key, value) {
-    return Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }), obj[key];
-  }
-  try {
-    define({}, "");
-  } catch (err) {
-    define = function define(obj, key, value) {
-      return obj[key] = value;
-    };
-  }
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
-      generator = Object.create(protoGenerator.prototype),
-      context = new Context(tryLocsList || []);
-    return defineProperty(generator, "_invoke", {
-      value: makeInvokeMethod(innerFn, self, context)
-    }), generator;
-  }
-  function tryCatch(fn, obj, arg) {
-    try {
-      return {
-        type: "normal",
-        arg: fn.call(obj, arg)
-      };
-    } catch (err) {
-      return {
-        type: "throw",
-        arg: err
-      };
-    }
-  }
-  exports.wrap = wrap;
-  var ContinueSentinel = {};
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-  var IteratorPrototype = {};
-  define(IteratorPrototype, iteratorSymbol, function () {
-    return this;
-  });
-  var getProto = Object.getPrototypeOf,
-    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
-  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function (method) {
-      define(prototype, method, function (arg) {
-        return this._invoke(method, arg);
-      });
-    });
-  }
-  function AsyncIterator(generator, PromiseImpl) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if ("throw" !== record.type) {
-        var result = record.arg,
-          value = result.value;
-        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
-          invoke("next", value, resolve, reject);
-        }, function (err) {
-          invoke("throw", err, resolve, reject);
-        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
-          result.value = unwrapped, resolve(result);
-        }, function (error) {
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-      reject(record.arg);
-    }
-    var previousPromise;
-    defineProperty(this, "_invoke", {
-      value: function value(method, arg) {
-        function callInvokeWithMethodAndArg() {
-          return new PromiseImpl(function (resolve, reject) {
-            invoke(method, arg, resolve, reject);
-          });
-        }
-        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
-      }
-    });
-  }
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = "suspendedStart";
-    return function (method, arg) {
-      if ("executing" === state) throw new Error("Generator is already running");
-      if ("completed" === state) {
-        if ("throw" === method) throw arg;
-        return doneResult();
-      }
-      for (context.method = method, context.arg = arg;;) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
-          if ("suspendedStart" === state) throw state = "completed", context.arg;
-          context.dispatchException(context.arg);
-        } else "return" === context.method && context.abrupt("return", context.arg);
-        state = "executing";
-        var record = tryCatch(innerFn, self, context);
-        if ("normal" === record.type) {
-          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
-          return {
-            value: record.arg,
-            done: context.done
-          };
-        }
-        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
-      }
-    };
-  }
-  function maybeInvokeDelegate(delegate, context) {
-    var methodName = context.method,
-      method = delegate.iterator[methodName];
-    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
-    var record = tryCatch(method, delegate.iterator, context.arg);
-    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
-    var info = record.arg;
-    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
-  }
-  function pushTryEntry(locs) {
-    var entry = {
-      tryLoc: locs[0]
-    };
-    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
-  }
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal", delete record.arg, entry.completion = record;
-  }
-  function Context(tryLocsList) {
-    this.tryEntries = [{
-      tryLoc: "root"
-    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
-  }
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) return iteratorMethod.call(iterable);
-      if ("function" == typeof iterable.next) return iterable;
-      if (!isNaN(iterable.length)) {
-        var i = -1,
-          next = function next() {
-            for (; ++i < iterable.length;) {
-              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
-            }
-            return next.value = undefined, next.done = !0, next;
-          };
-        return next.next = next;
-      }
-    }
-    return {
-      next: doneResult
-    };
-  }
-  function doneResult() {
-    return {
-      value: undefined,
-      done: !0
-    };
-  }
-  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
-    value: GeneratorFunctionPrototype,
-    configurable: !0
-  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
-    value: GeneratorFunction,
-    configurable: !0
-  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
-    var ctor = "function" == typeof genFun && genFun.constructor;
-    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
-  }, exports.mark = function (genFun) {
-    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
-  }, exports.awrap = function (arg) {
-    return {
-      __await: arg
-    };
-  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
-    return this;
-  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-    void 0 === PromiseImpl && (PromiseImpl = Promise);
-    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
-    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
-      return result.done ? result.value : iter.next();
-    });
-  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
-    return this;
-  }), define(Gp, "toString", function () {
-    return "[object Generator]";
-  }), exports.keys = function (val) {
-    var object = Object(val),
-      keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    return keys.reverse(), function next() {
-      for (; keys.length;) {
-        var key = keys.pop();
-        if (key in object) return next.value = key, next.done = !1, next;
-      }
-      return next.done = !0, next;
-    };
-  }, exports.values = values, Context.prototype = {
-    constructor: Context,
-    reset: function reset(skipTempReset) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
-        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
-      }
-    },
-    stop: function stop() {
-      this.done = !0;
-      var rootRecord = this.tryEntries[0].completion;
-      if ("throw" === rootRecord.type) throw rootRecord.arg;
-      return this.rval;
-    },
-    dispatchException: function dispatchException(exception) {
-      if (this.done) throw exception;
-      var context = this;
-      function handle(loc, caught) {
-        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
-      }
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i],
-          record = entry.completion;
-        if ("root" === entry.tryLoc) return handle("end");
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc"),
-            hasFinally = hasOwn.call(entry, "finallyLoc");
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-          } else {
-            if (!hasFinally) throw new Error("try statement without catch or finally");
-            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-          }
-        }
-      }
-    },
-    abrupt: function abrupt(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
-      var record = finallyEntry ? finallyEntry.completion : {};
-      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
-    },
-    complete: function complete(record, afterLoc) {
-      if ("throw" === record.type) throw record.arg;
-      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
-    },
-    finish: function finish(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
-      }
-    },
-    "catch": function _catch(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if ("throw" === record.type) {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-      throw new Error("illegal catch attempt");
-    },
-    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
-      return this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
-    }
-  }, exports;
-}
-module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-/* 89 */
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-      args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-      _next(undefined);
-    });
-  };
-}
-module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-/* 90 */
+/* 49 */
 /*!***********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
   \***********************************************************************/
@@ -11753,7 +10769,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 91 */
+/* 50 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
   \*********************************************************************/
@@ -12002,10 +11018,10 @@ var clone = function () {
 }();
 var _default = clone;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 92).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 51).Buffer))
 
 /***/ }),
-/* 92 */
+/* 51 */
 /*!**************************************!*\
   !*** ./node_modules/buffer/index.js ***!
   \**************************************/
@@ -12023,9 +11039,9 @@ exports.default = _default;
 
 
 
-var base64 = __webpack_require__(/*! base64-js */ 93)
-var ieee754 = __webpack_require__(/*! ieee754 */ 94)
-var isArray = __webpack_require__(/*! isarray */ 95)
+var base64 = __webpack_require__(/*! base64-js */ 52)
+var ieee754 = __webpack_require__(/*! ieee754 */ 53)
+var isArray = __webpack_require__(/*! isarray */ 54)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -13806,7 +12822,7 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-/* 93 */
+/* 52 */
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
   \*****************************************/
@@ -13967,7 +12983,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 94 */
+/* 53 */
 /*!***************************************!*\
   !*** ./node_modules/ieee754/index.js ***!
   \***************************************/
@@ -14062,7 +13078,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 95 */
+/* 54 */
 /*!***************************************!*\
   !*** ./node_modules/isarray/index.js ***!
   \***************************************/
@@ -14077,7 +13093,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 96 */
+/* 55 */
 /*!*******************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/util/route.js ***!
   \*******************************************************/
@@ -14092,8 +13108,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 87));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 89));
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 56));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 58));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
 /**
@@ -14265,7 +13281,381 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 97 */
+/* 56 */
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// TODO(Babel 8): Remove this file.
+
+var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 57)();
+module.exports = runtime;
+
+/***/ }),
+/* 57 */
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+function _regeneratorRuntime() {
+  "use strict";
+
+  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+    return exports;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  var exports = {},
+    Op = Object.prototype,
+    hasOwn = Op.hasOwnProperty,
+    defineProperty = Object.defineProperty || function (obj, key, desc) {
+      obj[key] = desc.value;
+    },
+    $Symbol = "function" == typeof Symbol ? Symbol : {},
+    iteratorSymbol = $Symbol.iterator || "@@iterator",
+    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+  function define(obj, key, value) {
+    return Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }), obj[key];
+  }
+  try {
+    define({}, "");
+  } catch (err) {
+    define = function define(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+      generator = Object.create(protoGenerator.prototype),
+      context = new Context(tryLocsList || []);
+    return defineProperty(generator, "_invoke", {
+      value: makeInvokeMethod(innerFn, self, context)
+    }), generator;
+  }
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+  exports.wrap = wrap;
+  var ContinueSentinel = {};
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+  var getProto = Object.getPrototypeOf,
+    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if ("throw" !== record.type) {
+        var result = record.arg,
+          value = result.value;
+        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+          invoke("next", value, resolve, reject);
+        }, function (err) {
+          invoke("throw", err, resolve, reject);
+        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+          result.value = unwrapped, resolve(result);
+        }, function (error) {
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+      reject(record.arg);
+    }
+    var previousPromise;
+    defineProperty(this, "_invoke", {
+      value: function value(method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new PromiseImpl(function (resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+      }
+    });
+  }
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = "suspendedStart";
+    return function (method, arg) {
+      if ("executing" === state) throw new Error("Generator is already running");
+      if ("completed" === state) {
+        if ("throw" === method) throw arg;
+        return doneResult();
+      }
+      for (context.method = method, context.arg = arg;;) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+          if ("suspendedStart" === state) throw state = "completed", context.arg;
+          context.dispatchException(context.arg);
+        } else "return" === context.method && context.abrupt("return", context.arg);
+        state = "executing";
+        var record = tryCatch(innerFn, self, context);
+        if ("normal" === record.type) {
+          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        }
+        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+      }
+    };
+  }
+  function maybeInvokeDelegate(delegate, context) {
+    var methodName = context.method,
+      method = delegate.iterator[methodName];
+    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+    var record = tryCatch(method, delegate.iterator, context.arg);
+    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+    var info = record.arg;
+    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+  }
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+  }
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal", delete record.arg, entry.completion = record;
+  }
+  function Context(tryLocsList) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+  }
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) return iteratorMethod.call(iterable);
+      if ("function" == typeof iterable.next) return iterable;
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+          next = function next() {
+            for (; ++i < iterable.length;) {
+              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+            }
+            return next.value = undefined, next.done = !0, next;
+          };
+        return next.next = next;
+      }
+    }
+    return {
+      next: doneResult
+    };
+  }
+  function doneResult() {
+    return {
+      value: undefined,
+      done: !0
+    };
+  }
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+    var ctor = "function" == typeof genFun && genFun.constructor;
+    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+  }, exports.mark = function (genFun) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+  }, exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    void 0 === PromiseImpl && (PromiseImpl = Promise);
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+    return this;
+  }), define(Gp, "toString", function () {
+    return "[object Generator]";
+  }), exports.keys = function (val) {
+    var object = Object(val),
+      keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    return keys.reverse(), function next() {
+      for (; keys.length;) {
+        var key = keys.pop();
+        if (key in object) return next.value = key, next.done = !1, next;
+      }
+      return next.done = !0, next;
+    };
+  }, exports.values = values, Context.prototype = {
+    constructor: Context,
+    reset: function reset(skipTempReset) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
+        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+      }
+    },
+    stop: function stop() {
+      this.done = !0;
+      var rootRecord = this.tryEntries[0].completion;
+      if ("throw" === rootRecord.type) throw rootRecord.arg;
+      return this.rval;
+    },
+    dispatchException: function dispatchException(exception) {
+      if (this.done) throw exception;
+      var context = this;
+      function handle(loc, caught) {
+        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+      }
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i],
+          record = entry.completion;
+        if ("root" === entry.tryLoc) return handle("end");
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc"),
+            hasFinally = hasOwn.call(entry, "finallyLoc");
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+          } else {
+            if (!hasFinally) throw new Error("try statement without catch or finally");
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+      var record = finallyEntry ? finallyEntry.completion : {};
+      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+    },
+    complete: function complete(record, afterLoc) {
+      if ("throw" === record.type) throw record.arg;
+      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+    },
+    finish: function finish(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+      }
+    },
+    "catch": function _catch(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if ("throw" === record.type) {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      return this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+    }
+  }, exports;
+}
+module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+/* 58 */
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+/* 59 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/colorGradient.js ***!
   \*******************************************************************/
@@ -14420,7 +13810,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 98 */
+/* 60 */
 /*!**********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/test.js ***!
   \**********************************************************/
@@ -14725,7 +14115,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 99 */
+/* 61 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/debounce.js ***!
   \**************************************************************/
@@ -14772,7 +14162,7 @@ var _default = debounce;
 exports.default = _default;
 
 /***/ }),
-/* 100 */
+/* 62 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/throttle.js ***!
   \**************************************************************/
@@ -14821,7 +14211,7 @@ var _default = throttle;
 exports.default = _default;
 
 /***/ }),
-/* 101 */
+/* 63 */
 /*!***********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/index.js ***!
   \***********************************************************/
@@ -14838,8 +14228,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 98));
-var _digit = __webpack_require__(/*! ./digit.js */ 102);
+var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 60));
+var _digit = __webpack_require__(/*! ./digit.js */ 64);
 /**
  * @description 如果value小于min，取min；如果value大于max，取max
  * @param {number} min
@@ -15622,7 +15012,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 102 */
+/* 64 */
 /*!***********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/digit.js ***!
   \***********************************************************/
@@ -15643,7 +15033,7 @@ exports.minus = minus;
 exports.plus = plus;
 exports.round = round;
 exports.times = times;
-var _toArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toArray */ 103));
+var _toArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toArray */ 65));
 var _boundaryCheckingState = true; // 是否进行越界检查的全局开关
 
 /**
@@ -15824,7 +15214,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 103 */
+/* 65 */
 /*!********************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/toArray.js ***!
   \********************************************************/
@@ -15841,7 +15231,7 @@ function _toArray(arr) {
 module.exports = _toArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
-/* 104 */
+/* 66 */
 /*!**********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/config.js ***!
   \**********************************************************/
@@ -15885,7 +15275,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 105 */
+/* 67 */
 /*!*********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props.js ***!
   \*********************************************************/
@@ -15901,95 +15291,95 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _config = _interopRequireDefault(__webpack_require__(/*! ./config */ 104));
-var _actionSheet = _interopRequireDefault(__webpack_require__(/*! ./props/actionSheet.js */ 106));
-var _album = _interopRequireDefault(__webpack_require__(/*! ./props/album.js */ 107));
-var _alert = _interopRequireDefault(__webpack_require__(/*! ./props/alert.js */ 108));
-var _avatar = _interopRequireDefault(__webpack_require__(/*! ./props/avatar */ 109));
-var _avatarGroup = _interopRequireDefault(__webpack_require__(/*! ./props/avatarGroup */ 110));
-var _backtop = _interopRequireDefault(__webpack_require__(/*! ./props/backtop */ 111));
-var _badge = _interopRequireDefault(__webpack_require__(/*! ./props/badge */ 112));
-var _button = _interopRequireDefault(__webpack_require__(/*! ./props/button */ 113));
-var _calendar = _interopRequireDefault(__webpack_require__(/*! ./props/calendar */ 114));
-var _carKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/carKeyboard */ 115));
-var _cell = _interopRequireDefault(__webpack_require__(/*! ./props/cell */ 116));
-var _cellGroup = _interopRequireDefault(__webpack_require__(/*! ./props/cellGroup */ 117));
-var _checkbox = _interopRequireDefault(__webpack_require__(/*! ./props/checkbox */ 118));
-var _checkboxGroup = _interopRequireDefault(__webpack_require__(/*! ./props/checkboxGroup */ 119));
-var _circleProgress = _interopRequireDefault(__webpack_require__(/*! ./props/circleProgress */ 120));
-var _code = _interopRequireDefault(__webpack_require__(/*! ./props/code */ 121));
-var _codeInput = _interopRequireDefault(__webpack_require__(/*! ./props/codeInput */ 122));
-var _col = _interopRequireDefault(__webpack_require__(/*! ./props/col */ 123));
-var _collapse = _interopRequireDefault(__webpack_require__(/*! ./props/collapse */ 124));
-var _collapseItem = _interopRequireDefault(__webpack_require__(/*! ./props/collapseItem */ 125));
-var _columnNotice = _interopRequireDefault(__webpack_require__(/*! ./props/columnNotice */ 126));
-var _countDown = _interopRequireDefault(__webpack_require__(/*! ./props/countDown */ 127));
-var _countTo = _interopRequireDefault(__webpack_require__(/*! ./props/countTo */ 128));
-var _datetimePicker = _interopRequireDefault(__webpack_require__(/*! ./props/datetimePicker */ 129));
-var _divider = _interopRequireDefault(__webpack_require__(/*! ./props/divider */ 130));
-var _empty = _interopRequireDefault(__webpack_require__(/*! ./props/empty */ 131));
-var _form = _interopRequireDefault(__webpack_require__(/*! ./props/form */ 132));
-var _formItem = _interopRequireDefault(__webpack_require__(/*! ./props/formItem */ 133));
-var _gap = _interopRequireDefault(__webpack_require__(/*! ./props/gap */ 134));
-var _grid = _interopRequireDefault(__webpack_require__(/*! ./props/grid */ 135));
-var _gridItem = _interopRequireDefault(__webpack_require__(/*! ./props/gridItem */ 136));
-var _icon = _interopRequireDefault(__webpack_require__(/*! ./props/icon */ 137));
-var _image = _interopRequireDefault(__webpack_require__(/*! ./props/image */ 138));
-var _indexAnchor = _interopRequireDefault(__webpack_require__(/*! ./props/indexAnchor */ 139));
-var _indexList = _interopRequireDefault(__webpack_require__(/*! ./props/indexList */ 140));
-var _input = _interopRequireDefault(__webpack_require__(/*! ./props/input */ 141));
-var _keyboard = _interopRequireDefault(__webpack_require__(/*! ./props/keyboard */ 142));
-var _line = _interopRequireDefault(__webpack_require__(/*! ./props/line */ 143));
-var _lineProgress = _interopRequireDefault(__webpack_require__(/*! ./props/lineProgress */ 144));
-var _link = _interopRequireDefault(__webpack_require__(/*! ./props/link */ 145));
-var _list = _interopRequireDefault(__webpack_require__(/*! ./props/list */ 146));
-var _listItem = _interopRequireDefault(__webpack_require__(/*! ./props/listItem */ 147));
-var _loadingIcon = _interopRequireDefault(__webpack_require__(/*! ./props/loadingIcon */ 148));
-var _loadingPage = _interopRequireDefault(__webpack_require__(/*! ./props/loadingPage */ 149));
-var _loadmore = _interopRequireDefault(__webpack_require__(/*! ./props/loadmore */ 150));
-var _modal = _interopRequireDefault(__webpack_require__(/*! ./props/modal */ 151));
-var _navbar = _interopRequireDefault(__webpack_require__(/*! ./props/navbar */ 152));
-var _noNetwork = _interopRequireDefault(__webpack_require__(/*! ./props/noNetwork */ 154));
-var _noticeBar = _interopRequireDefault(__webpack_require__(/*! ./props/noticeBar */ 155));
-var _notify = _interopRequireDefault(__webpack_require__(/*! ./props/notify */ 156));
-var _numberBox = _interopRequireDefault(__webpack_require__(/*! ./props/numberBox */ 157));
-var _numberKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/numberKeyboard */ 158));
-var _overlay = _interopRequireDefault(__webpack_require__(/*! ./props/overlay */ 159));
-var _parse = _interopRequireDefault(__webpack_require__(/*! ./props/parse */ 160));
-var _picker = _interopRequireDefault(__webpack_require__(/*! ./props/picker */ 161));
-var _popup = _interopRequireDefault(__webpack_require__(/*! ./props/popup */ 162));
-var _radio = _interopRequireDefault(__webpack_require__(/*! ./props/radio */ 163));
-var _radioGroup = _interopRequireDefault(__webpack_require__(/*! ./props/radioGroup */ 164));
-var _rate = _interopRequireDefault(__webpack_require__(/*! ./props/rate */ 165));
-var _readMore = _interopRequireDefault(__webpack_require__(/*! ./props/readMore */ 166));
-var _row = _interopRequireDefault(__webpack_require__(/*! ./props/row */ 167));
-var _rowNotice = _interopRequireDefault(__webpack_require__(/*! ./props/rowNotice */ 168));
-var _scrollList = _interopRequireDefault(__webpack_require__(/*! ./props/scrollList */ 169));
-var _search = _interopRequireDefault(__webpack_require__(/*! ./props/search */ 170));
-var _section = _interopRequireDefault(__webpack_require__(/*! ./props/section */ 171));
-var _skeleton = _interopRequireDefault(__webpack_require__(/*! ./props/skeleton */ 172));
-var _slider = _interopRequireDefault(__webpack_require__(/*! ./props/slider */ 173));
-var _statusBar = _interopRequireDefault(__webpack_require__(/*! ./props/statusBar */ 174));
-var _steps = _interopRequireDefault(__webpack_require__(/*! ./props/steps */ 175));
-var _stepsItem = _interopRequireDefault(__webpack_require__(/*! ./props/stepsItem */ 176));
-var _sticky = _interopRequireDefault(__webpack_require__(/*! ./props/sticky */ 177));
-var _subsection = _interopRequireDefault(__webpack_require__(/*! ./props/subsection */ 178));
-var _swipeAction = _interopRequireDefault(__webpack_require__(/*! ./props/swipeAction */ 179));
-var _swipeActionItem = _interopRequireDefault(__webpack_require__(/*! ./props/swipeActionItem */ 180));
-var _swiper = _interopRequireDefault(__webpack_require__(/*! ./props/swiper */ 181));
-var _swipterIndicator = _interopRequireDefault(__webpack_require__(/*! ./props/swipterIndicator */ 182));
-var _switch2 = _interopRequireDefault(__webpack_require__(/*! ./props/switch */ 183));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./props/tabbar */ 184));
-var _tabbarItem = _interopRequireDefault(__webpack_require__(/*! ./props/tabbarItem */ 185));
-var _tabs = _interopRequireDefault(__webpack_require__(/*! ./props/tabs */ 186));
-var _tag = _interopRequireDefault(__webpack_require__(/*! ./props/tag */ 187));
-var _text = _interopRequireDefault(__webpack_require__(/*! ./props/text */ 188));
-var _textarea = _interopRequireDefault(__webpack_require__(/*! ./props/textarea */ 189));
-var _toast = _interopRequireDefault(__webpack_require__(/*! ./props/toast */ 190));
-var _toolbar = _interopRequireDefault(__webpack_require__(/*! ./props/toolbar */ 191));
-var _tooltip = _interopRequireDefault(__webpack_require__(/*! ./props/tooltip */ 192));
-var _transition = _interopRequireDefault(__webpack_require__(/*! ./props/transition */ 193));
-var _upload = _interopRequireDefault(__webpack_require__(/*! ./props/upload */ 194));
+var _config = _interopRequireDefault(__webpack_require__(/*! ./config */ 66));
+var _actionSheet = _interopRequireDefault(__webpack_require__(/*! ./props/actionSheet.js */ 68));
+var _album = _interopRequireDefault(__webpack_require__(/*! ./props/album.js */ 69));
+var _alert = _interopRequireDefault(__webpack_require__(/*! ./props/alert.js */ 70));
+var _avatar = _interopRequireDefault(__webpack_require__(/*! ./props/avatar */ 71));
+var _avatarGroup = _interopRequireDefault(__webpack_require__(/*! ./props/avatarGroup */ 72));
+var _backtop = _interopRequireDefault(__webpack_require__(/*! ./props/backtop */ 73));
+var _badge = _interopRequireDefault(__webpack_require__(/*! ./props/badge */ 74));
+var _button = _interopRequireDefault(__webpack_require__(/*! ./props/button */ 75));
+var _calendar = _interopRequireDefault(__webpack_require__(/*! ./props/calendar */ 76));
+var _carKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/carKeyboard */ 77));
+var _cell = _interopRequireDefault(__webpack_require__(/*! ./props/cell */ 78));
+var _cellGroup = _interopRequireDefault(__webpack_require__(/*! ./props/cellGroup */ 79));
+var _checkbox = _interopRequireDefault(__webpack_require__(/*! ./props/checkbox */ 80));
+var _checkboxGroup = _interopRequireDefault(__webpack_require__(/*! ./props/checkboxGroup */ 81));
+var _circleProgress = _interopRequireDefault(__webpack_require__(/*! ./props/circleProgress */ 82));
+var _code = _interopRequireDefault(__webpack_require__(/*! ./props/code */ 83));
+var _codeInput = _interopRequireDefault(__webpack_require__(/*! ./props/codeInput */ 84));
+var _col = _interopRequireDefault(__webpack_require__(/*! ./props/col */ 85));
+var _collapse = _interopRequireDefault(__webpack_require__(/*! ./props/collapse */ 86));
+var _collapseItem = _interopRequireDefault(__webpack_require__(/*! ./props/collapseItem */ 87));
+var _columnNotice = _interopRequireDefault(__webpack_require__(/*! ./props/columnNotice */ 88));
+var _countDown = _interopRequireDefault(__webpack_require__(/*! ./props/countDown */ 89));
+var _countTo = _interopRequireDefault(__webpack_require__(/*! ./props/countTo */ 90));
+var _datetimePicker = _interopRequireDefault(__webpack_require__(/*! ./props/datetimePicker */ 91));
+var _divider = _interopRequireDefault(__webpack_require__(/*! ./props/divider */ 92));
+var _empty = _interopRequireDefault(__webpack_require__(/*! ./props/empty */ 93));
+var _form = _interopRequireDefault(__webpack_require__(/*! ./props/form */ 94));
+var _formItem = _interopRequireDefault(__webpack_require__(/*! ./props/formItem */ 95));
+var _gap = _interopRequireDefault(__webpack_require__(/*! ./props/gap */ 96));
+var _grid = _interopRequireDefault(__webpack_require__(/*! ./props/grid */ 97));
+var _gridItem = _interopRequireDefault(__webpack_require__(/*! ./props/gridItem */ 98));
+var _icon = _interopRequireDefault(__webpack_require__(/*! ./props/icon */ 99));
+var _image = _interopRequireDefault(__webpack_require__(/*! ./props/image */ 100));
+var _indexAnchor = _interopRequireDefault(__webpack_require__(/*! ./props/indexAnchor */ 101));
+var _indexList = _interopRequireDefault(__webpack_require__(/*! ./props/indexList */ 102));
+var _input = _interopRequireDefault(__webpack_require__(/*! ./props/input */ 103));
+var _keyboard = _interopRequireDefault(__webpack_require__(/*! ./props/keyboard */ 104));
+var _line = _interopRequireDefault(__webpack_require__(/*! ./props/line */ 105));
+var _lineProgress = _interopRequireDefault(__webpack_require__(/*! ./props/lineProgress */ 106));
+var _link = _interopRequireDefault(__webpack_require__(/*! ./props/link */ 107));
+var _list = _interopRequireDefault(__webpack_require__(/*! ./props/list */ 108));
+var _listItem = _interopRequireDefault(__webpack_require__(/*! ./props/listItem */ 109));
+var _loadingIcon = _interopRequireDefault(__webpack_require__(/*! ./props/loadingIcon */ 110));
+var _loadingPage = _interopRequireDefault(__webpack_require__(/*! ./props/loadingPage */ 111));
+var _loadmore = _interopRequireDefault(__webpack_require__(/*! ./props/loadmore */ 112));
+var _modal = _interopRequireDefault(__webpack_require__(/*! ./props/modal */ 113));
+var _navbar = _interopRequireDefault(__webpack_require__(/*! ./props/navbar */ 114));
+var _noNetwork = _interopRequireDefault(__webpack_require__(/*! ./props/noNetwork */ 116));
+var _noticeBar = _interopRequireDefault(__webpack_require__(/*! ./props/noticeBar */ 117));
+var _notify = _interopRequireDefault(__webpack_require__(/*! ./props/notify */ 118));
+var _numberBox = _interopRequireDefault(__webpack_require__(/*! ./props/numberBox */ 119));
+var _numberKeyboard = _interopRequireDefault(__webpack_require__(/*! ./props/numberKeyboard */ 120));
+var _overlay = _interopRequireDefault(__webpack_require__(/*! ./props/overlay */ 121));
+var _parse = _interopRequireDefault(__webpack_require__(/*! ./props/parse */ 122));
+var _picker = _interopRequireDefault(__webpack_require__(/*! ./props/picker */ 123));
+var _popup = _interopRequireDefault(__webpack_require__(/*! ./props/popup */ 124));
+var _radio = _interopRequireDefault(__webpack_require__(/*! ./props/radio */ 125));
+var _radioGroup = _interopRequireDefault(__webpack_require__(/*! ./props/radioGroup */ 126));
+var _rate = _interopRequireDefault(__webpack_require__(/*! ./props/rate */ 127));
+var _readMore = _interopRequireDefault(__webpack_require__(/*! ./props/readMore */ 128));
+var _row = _interopRequireDefault(__webpack_require__(/*! ./props/row */ 129));
+var _rowNotice = _interopRequireDefault(__webpack_require__(/*! ./props/rowNotice */ 130));
+var _scrollList = _interopRequireDefault(__webpack_require__(/*! ./props/scrollList */ 131));
+var _search = _interopRequireDefault(__webpack_require__(/*! ./props/search */ 132));
+var _section = _interopRequireDefault(__webpack_require__(/*! ./props/section */ 133));
+var _skeleton = _interopRequireDefault(__webpack_require__(/*! ./props/skeleton */ 134));
+var _slider = _interopRequireDefault(__webpack_require__(/*! ./props/slider */ 135));
+var _statusBar = _interopRequireDefault(__webpack_require__(/*! ./props/statusBar */ 136));
+var _steps = _interopRequireDefault(__webpack_require__(/*! ./props/steps */ 137));
+var _stepsItem = _interopRequireDefault(__webpack_require__(/*! ./props/stepsItem */ 138));
+var _sticky = _interopRequireDefault(__webpack_require__(/*! ./props/sticky */ 139));
+var _subsection = _interopRequireDefault(__webpack_require__(/*! ./props/subsection */ 140));
+var _swipeAction = _interopRequireDefault(__webpack_require__(/*! ./props/swipeAction */ 141));
+var _swipeActionItem = _interopRequireDefault(__webpack_require__(/*! ./props/swipeActionItem */ 142));
+var _swiper = _interopRequireDefault(__webpack_require__(/*! ./props/swiper */ 143));
+var _swipterIndicator = _interopRequireDefault(__webpack_require__(/*! ./props/swipterIndicator */ 144));
+var _switch2 = _interopRequireDefault(__webpack_require__(/*! ./props/switch */ 145));
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./props/tabbar */ 146));
+var _tabbarItem = _interopRequireDefault(__webpack_require__(/*! ./props/tabbarItem */ 147));
+var _tabs = _interopRequireDefault(__webpack_require__(/*! ./props/tabs */ 148));
+var _tag = _interopRequireDefault(__webpack_require__(/*! ./props/tag */ 149));
+var _text = _interopRequireDefault(__webpack_require__(/*! ./props/text */ 150));
+var _textarea = _interopRequireDefault(__webpack_require__(/*! ./props/textarea */ 151));
+var _toast = _interopRequireDefault(__webpack_require__(/*! ./props/toast */ 152));
+var _toolbar = _interopRequireDefault(__webpack_require__(/*! ./props/toolbar */ 153));
+var _tooltip = _interopRequireDefault(__webpack_require__(/*! ./props/tooltip */ 154));
+var _transition = _interopRequireDefault(__webpack_require__(/*! ./props/transition */ 155));
+var _upload = _interopRequireDefault(__webpack_require__(/*! ./props/upload */ 156));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var color = _config.default.color;
@@ -15997,7 +15387,7 @@ var _default = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSp
 exports.default = _default;
 
 /***/ }),
-/* 106 */
+/* 68 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
   \*********************************************************************/
@@ -16041,7 +15431,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 107 */
+/* 69 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/album.js ***!
   \***************************************************************/
@@ -16085,7 +15475,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 108 */
+/* 70 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/alert.js ***!
   \***************************************************************/
@@ -16124,7 +15514,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 109 */
+/* 71 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/avatar.js ***!
   \****************************************************************/
@@ -16169,7 +15559,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 110 */
+/* 72 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
   \*********************************************************************/
@@ -16211,7 +15601,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 111 */
+/* 73 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/backtop.js ***!
   \*****************************************************************/
@@ -16257,7 +15647,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 112 */
+/* 74 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/badge.js ***!
   \***************************************************************/
@@ -16303,7 +15693,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 113 */
+/* 75 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/button.js ***!
   \****************************************************************/
@@ -16362,7 +15752,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 114 */
+/* 76 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/calendar.js ***!
   \******************************************************************/
@@ -16425,7 +15815,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 115 */
+/* 77 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
   \*********************************************************************/
@@ -16457,7 +15847,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 116 */
+/* 78 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/cell.js ***!
   \**************************************************************/
@@ -16509,7 +15899,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 117 */
+/* 79 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
   \*******************************************************************/
@@ -16543,7 +15933,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 118 */
+/* 80 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
   \******************************************************************/
@@ -16587,7 +15977,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 119 */
+/* 81 */
 /*!***********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
   \***********************************************************************/
@@ -16635,7 +16025,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 120 */
+/* 82 */
 /*!************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
   \************************************************************************/
@@ -16667,7 +16057,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 121 */
+/* 83 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/code.js ***!
   \**************************************************************/
@@ -16704,7 +16094,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 122 */
+/* 84 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
   \*******************************************************************/
@@ -16750,7 +16140,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 123 */
+/* 85 */
 /*!*************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/col.js ***!
   \*************************************************************/
@@ -16786,7 +16176,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 124 */
+/* 86 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/collapse.js ***!
   \******************************************************************/
@@ -16820,7 +16210,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 125 */
+/* 87 */
 /*!**********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
   \**********************************************************************/
@@ -16862,7 +16252,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 126 */
+/* 88 */
 /*!**********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
   \**********************************************************************/
@@ -16903,7 +16293,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 127 */
+/* 89 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/countDown.js ***!
   \*******************************************************************/
@@ -16938,7 +16328,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 128 */
+/* 90 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/countTo.js ***!
   \*****************************************************************/
@@ -16980,7 +16370,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 129 */
+/* 91 */
 /*!************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
   \************************************************************************/
@@ -17035,7 +16425,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 130 */
+/* 92 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/divider.js ***!
   \*****************************************************************/
@@ -17074,7 +16464,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 131 */
+/* 93 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/empty.js ***!
   \***************************************************************/
@@ -17116,7 +16506,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 132 */
+/* 94 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/form.js ***!
   \**************************************************************/
@@ -17161,7 +16551,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 133 */
+/* 95 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/formItem.js ***!
   \******************************************************************/
@@ -17201,7 +16591,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 134 */
+/* 96 */
 /*!*************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/gap.js ***!
   \*************************************************************/
@@ -17237,7 +16627,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 135 */
+/* 97 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/grid.js ***!
   \**************************************************************/
@@ -17271,7 +16661,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 136 */
+/* 98 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
   \******************************************************************/
@@ -17304,7 +16694,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 137 */
+/* 99 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/icon.js ***!
   \**************************************************************/
@@ -17319,7 +16709,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 104));
+var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 66));
 /*
  * @Author       : LQ
  * @Description  :
@@ -17356,7 +16746,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 138 */
+/* 100 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/image.js ***!
   \***************************************************************/
@@ -17403,7 +16793,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 139 */
+/* 101 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
   \*********************************************************************/
@@ -17439,7 +16829,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 140 */
+/* 102 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/indexList.js ***!
   \*******************************************************************/
@@ -17477,7 +16867,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 141 */
+/* 103 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/input.js ***!
   \***************************************************************/
@@ -17542,7 +16932,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 142 */
+/* 104 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
   \******************************************************************/
@@ -17589,7 +16979,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 143 */
+/* 105 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/line.js ***!
   \**************************************************************/
@@ -17626,7 +17016,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 144 */
+/* 106 */
 /*!**********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
   \**********************************************************************/
@@ -17662,7 +17052,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 145 */
+/* 107 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/link.js ***!
   \**************************************************************/
@@ -17677,7 +17067,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 104));
+var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 66));
 /*
  * @Author       : LQ
  * @Description  :
@@ -17704,7 +17094,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 146 */
+/* 108 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/list.js ***!
   \**************************************************************/
@@ -17749,7 +17139,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 147 */
+/* 109 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/listItem.js ***!
   \******************************************************************/
@@ -17781,7 +17171,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 148 */
+/* 110 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
   \*********************************************************************/
@@ -17796,7 +17186,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 104));
+var _config = _interopRequireDefault(__webpack_require__(/*! ../config */ 66));
 /*
  * @Author       : LQ
  * @Description  :
@@ -17827,7 +17217,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 149 */
+/* 111 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
   \*********************************************************************/
@@ -17867,7 +17257,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 150 */
+/* 112 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
   \******************************************************************/
@@ -17916,7 +17306,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 151 */
+/* 113 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/modal.js ***!
   \***************************************************************/
@@ -17963,7 +17353,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 152 */
+/* 114 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/navbar.js ***!
   \****************************************************************/
@@ -17978,7 +17368,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _color = _interopRequireDefault(__webpack_require__(/*! ../color */ 153));
+var _color = _interopRequireDefault(__webpack_require__(/*! ../color */ 115));
 /*
  * @Author       : LQ
  * @Description  :
@@ -18012,7 +17402,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 153 */
+/* 115 */
 /*!*********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/color.js ***!
   \*********************************************************/
@@ -18045,7 +17435,7 @@ var _default = color;
 exports.default = _default;
 
 /***/ }),
-/* 154 */
+/* 116 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
   \*******************************************************************/
@@ -18079,7 +17469,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 155 */
+/* 117 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
   \*******************************************************************/
@@ -18125,7 +17515,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 156 */
+/* 118 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/notify.js ***!
   \****************************************************************/
@@ -18164,7 +17554,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 157 */
+/* 119 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
   \*******************************************************************/
@@ -18216,7 +17606,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 158 */
+/* 120 */
 /*!************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
   \************************************************************************/
@@ -18250,7 +17640,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 159 */
+/* 121 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/overlay.js ***!
   \*****************************************************************/
@@ -18285,7 +17675,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 160 */
+/* 122 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/parse.js ***!
   \***************************************************************/
@@ -18324,7 +17714,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 161 */
+/* 123 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/picker.js ***!
   \****************************************************************/
@@ -18374,7 +17764,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 162 */
+/* 124 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/popup.js ***!
   \***************************************************************/
@@ -18420,7 +17810,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 163 */
+/* 125 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/radio.js ***!
   \***************************************************************/
@@ -18464,7 +17854,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 164 */
+/* 126 */
 /*!********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
   \********************************************************************/
@@ -18511,7 +17901,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 165 */
+/* 127 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/rate.js ***!
   \**************************************************************/
@@ -18554,7 +17944,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 166 */
+/* 128 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/readMore.js ***!
   \******************************************************************/
@@ -18593,7 +17983,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 167 */
+/* 129 */
 /*!*************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/row.js ***!
   \*************************************************************/
@@ -18627,7 +18017,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 168 */
+/* 130 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
   \*******************************************************************/
@@ -18665,7 +18055,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 169 */
+/* 131 */
 /*!********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
   \********************************************************************/
@@ -18702,7 +18092,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 170 */
+/* 132 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/search.js ***!
   \****************************************************************/
@@ -18760,7 +18150,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 171 */
+/* 133 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/section.js ***!
   \*****************************************************************/
@@ -18801,7 +18191,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 172 */
+/* 134 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
   \******************************************************************/
@@ -18843,7 +18233,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 173 */
+/* 135 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/slider.js ***!
   \****************************************************************/
@@ -18885,7 +18275,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 174 */
+/* 136 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
   \*******************************************************************/
@@ -18917,7 +18307,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 175 */
+/* 137 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/steps.js ***!
   \***************************************************************/
@@ -18955,7 +18345,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 176 */
+/* 138 */
 /*!*******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
   \*******************************************************************/
@@ -18990,7 +18380,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 177 */
+/* 139 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/sticky.js ***!
   \****************************************************************/
@@ -19027,7 +18417,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 178 */
+/* 140 */
 /*!********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/subsection.js ***!
   \********************************************************************/
@@ -19067,7 +18457,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 179 */
+/* 141 */
 /*!*********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
   \*********************************************************************/
@@ -19099,7 +18489,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 180 */
+/* 142 */
 /*!*************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
   \*************************************************************************/
@@ -19137,7 +18527,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 181 */
+/* 143 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/swiper.js ***!
   \****************************************************************/
@@ -19194,7 +18584,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 182 */
+/* 144 */
 /*!**************************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
   \**************************************************************************/
@@ -19230,7 +18620,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 183 */
+/* 145 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/switch.js ***!
   \****************************************************************/
@@ -19271,7 +18661,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 184 */
+/* 146 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
   \****************************************************************/
@@ -19310,7 +18700,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 185 */
+/* 147 */
 /*!********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
   \********************************************************************/
@@ -19347,7 +18737,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 186 */
+/* 148 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/tabs.js ***!
   \**************************************************************/
@@ -19404,7 +18794,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 187 */
+/* 149 */
 /*!*************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/tag.js ***!
   \*************************************************************/
@@ -19450,7 +18840,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 188 */
+/* 150 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/text.js ***!
   \**************************************************************/
@@ -19506,7 +18896,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 189 */
+/* 151 */
 /*!******************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/textarea.js ***!
   \******************************************************************/
@@ -19559,7 +18949,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 190 */
+/* 152 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/toast.js ***!
   \***************************************************************/
@@ -19605,7 +18995,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 191 */
+/* 153 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
   \*****************************************************************/
@@ -19642,7 +19032,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 192 */
+/* 154 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
   \*****************************************************************/
@@ -19686,7 +19076,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 193 */
+/* 155 */
 /*!********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/transition.js ***!
   \********************************************************************/
@@ -19721,7 +19111,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 194 */
+/* 156 */
 /*!****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/props/upload.js ***!
   \****************************************************************/
@@ -19780,7 +19170,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 195 */
+/* 157 */
 /*!**********************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/config/zIndex.js ***!
   \**********************************************************/
@@ -19816,7 +19206,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 196 */
+/* 158 */
 /*!**************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/function/platform.js ***!
   \**************************************************************/
@@ -19846,9 +19236,54 @@ var _default = platform;
 exports.default = _default;
 
 /***/ }),
-/* 197 */,
-/* 198 */,
-/* 199 */
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */
+/*!****************************!*\
+  !*** D:/zodo/api/login.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _request = _interopRequireDefault(__webpack_require__(/*! @/request.js */ 166));
+var _default = {
+  login: function login(params) {
+    return params;
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 166 */
+/*!**************************!*\
+  !*** D:/zodo/request.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/components/u-form/props.js ***!
   \***************************************************************/
@@ -19911,12 +19346,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */
 /*!********************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/components/u-form-item/props.js ***!
   \********************************************************************/
@@ -19982,24 +19417,571 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */
+/*!****************************************************************!*\
+  !*** D:/zodo/uni_modules/uview-ui/components/u-input/props.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 输入的值
+    value: {
+      type: [String, Number],
+      default: uni.$u.props.input.value
+    },
+    // 输入框类型
+    // number-数字输入键盘，app-vue下可以输入浮点数，app-nvue和小程序平台下只能输入整数
+    // idcard-身份证输入键盘，微信、支付宝、百度、QQ小程序
+    // digit-带小数点的数字键盘，App的nvue页面、微信、支付宝、百度、头条、QQ小程序
+    // text-文本输入键盘
+    type: {
+      type: String,
+      default: uni.$u.props.input.type
+    },
+    // 如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true，
+    // 兼容性：微信小程序、百度小程序、字节跳动小程序、QQ小程序
+    fixed: {
+      type: Boolean,
+      default: uni.$u.props.input.fixed
+    },
+    // 是否禁用输入框
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.input.disabled
+    },
+    // 禁用状态时的背景色
+    disabledColor: {
+      type: String,
+      default: uni.$u.props.input.disabledColor
+    },
+    // 是否显示清除控件
+    clearable: {
+      type: Boolean,
+      default: uni.$u.props.input.clearable
+    },
+    // 是否密码类型
+    password: {
+      type: Boolean,
+      default: uni.$u.props.input.password
+    },
+    // 最大输入长度，设置为 -1 的时候不限制最大长度
+    maxlength: {
+      type: [String, Number],
+      default: uni.$u.props.input.maxlength
+    },
+    // 	输入框为空时的占位符
+    placeholder: {
+      type: String,
+      default: uni.$u.props.input.placeholder
+    },
+    // 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/
+    placeholderClass: {
+      type: String,
+      default: uni.$u.props.input.placeholderClass
+    },
+    // 指定placeholder的样式
+    placeholderStyle: {
+      type: [String, Object],
+      default: uni.$u.props.input.placeholderStyle
+    },
+    // 是否显示输入字数统计，只在 type ="text"或type ="textarea"时有效
+    showWordLimit: {
+      type: Boolean,
+      default: uni.$u.props.input.showWordLimit
+    },
+    // 设置右下角按钮的文字，有效值：send|search|next|go|done，兼容性详见uni-app文档
+    // https://uniapp.dcloud.io/component/input
+    // https://uniapp.dcloud.io/component/textarea
+    confirmType: {
+      type: String,
+      default: uni.$u.props.input.confirmType
+    },
+    // 点击键盘右下角按钮时是否保持键盘不收起，H5无效
+    confirmHold: {
+      type: Boolean,
+      default: uni.$u.props.input.confirmHold
+    },
+    // focus时，点击页面的时候不收起键盘，微信小程序有效
+    holdKeyboard: {
+      type: Boolean,
+      default: uni.$u.props.input.holdKeyboard
+    },
+    // 自动获取焦点
+    // 在 H5 平台能否聚焦以及软键盘是否跟随弹出，取决于当前浏览器本身的实现。nvue 页面不支持，需使用组件的 focus()、blur() 方法控制焦点
+    focus: {
+      type: Boolean,
+      default: uni.$u.props.input.focus
+    },
+    // 键盘收起时，是否自动失去焦点，目前仅App3.0.0+有效
+    autoBlur: {
+      type: Boolean,
+      default: uni.$u.props.input.autoBlur
+    },
+    // 是否去掉 iOS 下的默认内边距，仅微信小程序，且type=textarea时有效
+    disableDefaultPadding: {
+      type: Boolean,
+      default: uni.$u.props.input.disableDefaultPadding
+    },
+    // 指定focus时光标的位置
+    cursor: {
+      type: [String, Number],
+      default: uni.$u.props.input.cursor
+    },
+    // 输入框聚焦时底部与键盘的距离
+    cursorSpacing: {
+      type: [String, Number],
+      default: uni.$u.props.input.cursorSpacing
+    },
+    // 光标起始位置，自动聚集时有效，需与selection-end搭配使用
+    selectionStart: {
+      type: [String, Number],
+      default: uni.$u.props.input.selectionStart
+    },
+    // 光标结束位置，自动聚集时有效，需与selection-start搭配使用
+    selectionEnd: {
+      type: [String, Number],
+      default: uni.$u.props.input.selectionEnd
+    },
+    // 键盘弹起时，是否自动上推页面
+    adjustPosition: {
+      type: Boolean,
+      default: uni.$u.props.input.adjustPosition
+    },
+    // 输入框内容对齐方式，可选值为：left|center|right
+    inputAlign: {
+      type: String,
+      default: uni.$u.props.input.inputAlign
+    },
+    // 输入框字体的大小
+    fontSize: {
+      type: [String, Number],
+      default: uni.$u.props.input.fontSize
+    },
+    // 输入框字体颜色
+    color: {
+      type: String,
+      default: uni.$u.props.input.color
+    },
+    // 输入框前置图标
+    prefixIcon: {
+      type: String,
+      default: uni.$u.props.input.prefixIcon
+    },
+    // 前置图标样式，对象或字符串
+    prefixIconStyle: {
+      type: [String, Object],
+      default: uni.$u.props.input.prefixIconStyle
+    },
+    // 输入框后置图标
+    suffixIcon: {
+      type: String,
+      default: uni.$u.props.input.suffixIcon
+    },
+    // 后置图标样式，对象或字符串
+    suffixIconStyle: {
+      type: [String, Object],
+      default: uni.$u.props.input.suffixIconStyle
+    },
+    // 边框类型，surround-四周边框，bottom-底部边框，none-无边框
+    border: {
+      type: String,
+      default: uni.$u.props.input.border
+    },
+    // 是否只读，与disabled不同之处在于disabled会置灰组件，而readonly则不会
+    readonly: {
+      type: Boolean,
+      default: uni.$u.props.input.readonly
+    },
+    // 输入框形状，circle-圆形，square-方形
+    shape: {
+      type: String,
+      default: uni.$u.props.input.shape
+    },
+    // 用于处理或者过滤输入框内容的方法
+    formatter: {
+      type: [Function, null],
+      default: uni.$u.props.input.formatter
+    },
+    // 是否忽略组件内对文本合成系统事件的处理
+    ignoreCompositionEvent: {
+      type: Boolean,
+      default: true
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */
+/*!***************************************************************!*\
+  !*** D:/zodo/uni_modules/uview-ui/components/u-icon/icons.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'uicon-level': "\uE693",
+  'uicon-column-line': "\uE68E",
+  'uicon-checkbox-mark': "\uE807",
+  'uicon-folder': "\uE7F5",
+  'uicon-movie': "\uE7F6",
+  'uicon-star-fill': "\uE669",
+  'uicon-star': "\uE65F",
+  'uicon-phone-fill': "\uE64F",
+  'uicon-phone': "\uE622",
+  'uicon-apple-fill': "\uE881",
+  'uicon-chrome-circle-fill': "\uE885",
+  'uicon-backspace': "\uE67B",
+  'uicon-attach': "\uE632",
+  'uicon-cut': "\uE948",
+  'uicon-empty-car': "\uE602",
+  'uicon-empty-coupon': "\uE682",
+  'uicon-empty-address': "\uE646",
+  'uicon-empty-favor': "\uE67C",
+  'uicon-empty-permission': "\uE686",
+  'uicon-empty-news': "\uE687",
+  'uicon-empty-search': "\uE664",
+  'uicon-github-circle-fill': "\uE887",
+  'uicon-rmb': "\uE608",
+  'uicon-person-delete-fill': "\uE66A",
+  'uicon-reload': "\uE788",
+  'uicon-order': "\uE68F",
+  'uicon-server-man': "\uE6BC",
+  'uicon-search': "\uE62A",
+  'uicon-fingerprint': "\uE955",
+  'uicon-more-dot-fill': "\uE630",
+  'uicon-scan': "\uE662",
+  'uicon-share-square': "\uE60B",
+  'uicon-map': "\uE61D",
+  'uicon-map-fill': "\uE64E",
+  'uicon-tags': "\uE629",
+  'uicon-tags-fill': "\uE651",
+  'uicon-bookmark-fill': "\uE63B",
+  'uicon-bookmark': "\uE60A",
+  'uicon-eye': "\uE613",
+  'uicon-eye-fill': "\uE641",
+  'uicon-mic': "\uE64A",
+  'uicon-mic-off': "\uE649",
+  'uicon-calendar': "\uE66E",
+  'uicon-calendar-fill': "\uE634",
+  'uicon-trash': "\uE623",
+  'uicon-trash-fill': "\uE658",
+  'uicon-play-left': "\uE66D",
+  'uicon-play-right': "\uE610",
+  'uicon-minus': "\uE618",
+  'uicon-plus': "\uE62D",
+  'uicon-info': "\uE653",
+  'uicon-info-circle': "\uE7D2",
+  'uicon-info-circle-fill': "\uE64B",
+  'uicon-question': "\uE715",
+  'uicon-error': "\uE6D3",
+  'uicon-close': "\uE685",
+  'uicon-checkmark': "\uE6A8",
+  'uicon-android-circle-fill': "\uE67E",
+  'uicon-android-fill': "\uE67D",
+  'uicon-ie': "\uE87B",
+  'uicon-IE-circle-fill': "\uE889",
+  'uicon-google': "\uE87A",
+  'uicon-google-circle-fill': "\uE88A",
+  'uicon-setting-fill': "\uE872",
+  'uicon-setting': "\uE61F",
+  'uicon-minus-square-fill': "\uE855",
+  'uicon-plus-square-fill': "\uE856",
+  'uicon-heart': "\uE7DF",
+  'uicon-heart-fill': "\uE851",
+  'uicon-camera': "\uE7D7",
+  'uicon-camera-fill': "\uE870",
+  'uicon-more-circle': "\uE63E",
+  'uicon-more-circle-fill': "\uE645",
+  'uicon-chat': "\uE620",
+  'uicon-chat-fill': "\uE61E",
+  'uicon-bag-fill': "\uE617",
+  'uicon-bag': "\uE619",
+  'uicon-error-circle-fill': "\uE62C",
+  'uicon-error-circle': "\uE624",
+  'uicon-close-circle': "\uE63F",
+  'uicon-close-circle-fill': "\uE637",
+  'uicon-checkmark-circle': "\uE63D",
+  'uicon-checkmark-circle-fill': "\uE635",
+  'uicon-question-circle-fill': "\uE666",
+  'uicon-question-circle': "\uE625",
+  'uicon-share': "\uE631",
+  'uicon-share-fill': "\uE65E",
+  'uicon-shopping-cart': "\uE621",
+  'uicon-shopping-cart-fill': "\uE65D",
+  'uicon-bell': "\uE609",
+  'uicon-bell-fill': "\uE640",
+  'uicon-list': "\uE650",
+  'uicon-list-dot': "\uE616",
+  'uicon-zhihu': "\uE6BA",
+  'uicon-zhihu-circle-fill': "\uE709",
+  'uicon-zhifubao': "\uE6B9",
+  'uicon-zhifubao-circle-fill': "\uE6B8",
+  'uicon-weixin-circle-fill': "\uE6B1",
+  'uicon-weixin-fill': "\uE6B2",
+  'uicon-twitter-circle-fill': "\uE6AB",
+  'uicon-twitter': "\uE6AA",
+  'uicon-taobao-circle-fill': "\uE6A7",
+  'uicon-taobao': "\uE6A6",
+  'uicon-weibo-circle-fill': "\uE6A5",
+  'uicon-weibo': "\uE6A4",
+  'uicon-qq-fill': "\uE6A1",
+  'uicon-qq-circle-fill': "\uE6A0",
+  'uicon-moments-circel-fill': "\uE69A",
+  'uicon-moments': "\uE69B",
+  'uicon-qzone': "\uE695",
+  'uicon-qzone-circle-fill': "\uE696",
+  'uicon-baidu-circle-fill': "\uE680",
+  'uicon-baidu': "\uE681",
+  'uicon-facebook-circle-fill': "\uE68A",
+  'uicon-facebook': "\uE689",
+  'uicon-car': "\uE60C",
+  'uicon-car-fill': "\uE636",
+  'uicon-warning-fill': "\uE64D",
+  'uicon-warning': "\uE694",
+  'uicon-clock-fill': "\uE638",
+  'uicon-clock': "\uE60F",
+  'uicon-edit-pen': "\uE612",
+  'uicon-edit-pen-fill': "\uE66B",
+  'uicon-email': "\uE611",
+  'uicon-email-fill': "\uE642",
+  'uicon-minus-circle': "\uE61B",
+  'uicon-minus-circle-fill': "\uE652",
+  'uicon-plus-circle': "\uE62E",
+  'uicon-plus-circle-fill': "\uE661",
+  'uicon-file-text': "\uE663",
+  'uicon-file-text-fill': "\uE665",
+  'uicon-pushpin': "\uE7E3",
+  'uicon-pushpin-fill': "\uE86E",
+  'uicon-grid': "\uE673",
+  'uicon-grid-fill': "\uE678",
+  'uicon-play-circle': "\uE647",
+  'uicon-play-circle-fill': "\uE655",
+  'uicon-pause-circle-fill': "\uE654",
+  'uicon-pause': "\uE8FA",
+  'uicon-pause-circle': "\uE643",
+  'uicon-eye-off': "\uE648",
+  'uicon-eye-off-outline': "\uE62B",
+  'uicon-gift-fill': "\uE65C",
+  'uicon-gift': "\uE65B",
+  'uicon-rmb-circle-fill': "\uE657",
+  'uicon-rmb-circle': "\uE677",
+  'uicon-kefu-ermai': "\uE656",
+  'uicon-server-fill': "\uE751",
+  'uicon-coupon-fill': "\uE8C4",
+  'uicon-coupon': "\uE8AE",
+  'uicon-integral': "\uE704",
+  'uicon-integral-fill': "\uE703",
+  'uicon-home-fill': "\uE964",
+  'uicon-home': "\uE965",
+  'uicon-hourglass-half-fill': "\uE966",
+  'uicon-hourglass': "\uE967",
+  'uicon-account': "\uE628",
+  'uicon-plus-people-fill': "\uE626",
+  'uicon-minus-people-fill': "\uE615",
+  'uicon-account-fill': "\uE614",
+  'uicon-thumb-down-fill': "\uE726",
+  'uicon-thumb-down': "\uE727",
+  'uicon-thumb-up': "\uE733",
+  'uicon-thumb-up-fill': "\uE72F",
+  'uicon-lock-fill': "\uE979",
+  'uicon-lock-open': "\uE973",
+  'uicon-lock-opened-fill': "\uE974",
+  'uicon-lock': "\uE97A",
+  'uicon-red-packet-fill': "\uE690",
+  'uicon-photo-fill': "\uE98B",
+  'uicon-photo': "\uE98D",
+  'uicon-volume-off-fill': "\uE659",
+  'uicon-volume-off': "\uE644",
+  'uicon-volume-fill': "\uE670",
+  'uicon-volume': "\uE633",
+  'uicon-red-packet': "\uE691",
+  'uicon-download': "\uE63C",
+  'uicon-arrow-up-fill': "\uE6B0",
+  'uicon-arrow-down-fill': "\uE600",
+  'uicon-play-left-fill': "\uE675",
+  'uicon-play-right-fill': "\uE676",
+  'uicon-rewind-left-fill': "\uE679",
+  'uicon-rewind-right-fill': "\uE67A",
+  'uicon-arrow-downward': "\uE604",
+  'uicon-arrow-leftward': "\uE601",
+  'uicon-arrow-rightward': "\uE603",
+  'uicon-arrow-upward': "\uE607",
+  'uicon-arrow-down': "\uE60D",
+  'uicon-arrow-right': "\uE605",
+  'uicon-arrow-left': "\uE60E",
+  'uicon-arrow-up': "\uE606",
+  'uicon-skip-back-left': "\uE674",
+  'uicon-skip-forward-right': "\uE672",
+  'uicon-rewind-right': "\uE66F",
+  'uicon-rewind-left': "\uE671",
+  'uicon-arrow-right-double': "\uE68D",
+  'uicon-arrow-left-double': "\uE68C",
+  'uicon-wifi-off': "\uE668",
+  'uicon-wifi': "\uE667",
+  'uicon-empty-data': "\uE62F",
+  'uicon-empty-history': "\uE684",
+  'uicon-empty-list': "\uE68B",
+  'uicon-empty-page': "\uE627",
+  'uicon-empty-order': "\uE639",
+  'uicon-man': "\uE697",
+  'uicon-woman': "\uE69C",
+  'uicon-man-add': "\uE61C",
+  'uicon-man-add-fill': "\uE64C",
+  'uicon-man-delete': "\uE61A",
+  'uicon-man-delete-fill': "\uE66A",
+  'uicon-zh': "\uE70A",
+  'uicon-en': "\uE692"
+};
+exports.default = _default;
+
+/***/ }),
+/* 197 */
+/*!***************************************************************!*\
+  !*** D:/zodo/uni_modules/uview-ui/components/u-icon/props.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 图标类名
+    name: {
+      type: String,
+      default: uni.$u.props.icon.name
+    },
+    // 图标颜色，可接受主题色
+    color: {
+      type: String,
+      default: uni.$u.props.icon.color
+    },
+    // 字体大小，单位px
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.icon.size
+    },
+    // 是否显示粗体
+    bold: {
+      type: Boolean,
+      default: uni.$u.props.icon.bold
+    },
+    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
+    index: {
+      type: [String, Number],
+      default: uni.$u.props.icon.index
+    },
+    // 触摸图标时的类名
+    hoverClass: {
+      type: String,
+      default: uni.$u.props.icon.hoverClass
+    },
+    // 自定义扩展前缀，方便用户扩展自己的图标库
+    customPrefix: {
+      type: String,
+      default: uni.$u.props.icon.customPrefix
+    },
+    // 图标右边或者下面的文字
+    label: {
+      type: [String, Number],
+      default: uni.$u.props.icon.label
+    },
+    // label的位置，只能右边或者下边
+    labelPos: {
+      type: String,
+      default: uni.$u.props.icon.labelPos
+    },
+    // label的大小
+    labelSize: {
+      type: [String, Number],
+      default: uni.$u.props.icon.labelSize
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: uni.$u.props.icon.labelColor
+    },
+    // label与图标的距离
+    space: {
+      type: [String, Number],
+      default: uni.$u.props.icon.space
+    },
+    // 图片的mode
+    imgMode: {
+      type: String,
+      default: uni.$u.props.icon.imgMode
+    },
+    // 用于显示图片小图标时，图片的宽度
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.icon.width
+    },
+    // 用于显示图片小图标时，图片的高度
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.icon.height
+    },
+    // 用于解决某些情况下，让图标垂直居中的用途
+    top: {
+      type: [String, Number],
+      default: uni.$u.props.icon.top
+    },
+    // 是否阻止事件传播
+    stop: {
+      type: Boolean,
+      default: uni.$u.props.icon.stop
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */
 /*!*****************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/libs/util/async-validator.js ***!
   \*****************************************************************/
@@ -21180,10 +21162,10 @@ Schema.warning = warning;
 Schema.messages = messages;
 var _default = Schema; // # sourceMappingURL=index.js.map
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 224)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 206)))
 
 /***/ }),
-/* 224 */
+/* 206 */
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -21214,7 +21196,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 225);
+        if (!path) path = __webpack_require__(/*! path */ 207);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -21227,7 +21209,7 @@ exports.features = {};
 
 
 /***/ }),
-/* 225 */
+/* 207 */
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -21537,15 +21519,15 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 224)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 206)))
 
 /***/ }),
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */
 /*!***************************************************************!*\
   !*** D:/zodo/uni_modules/uview-ui/components/u-line/props.js ***!
   \***************************************************************/
