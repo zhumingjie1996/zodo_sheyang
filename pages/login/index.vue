@@ -132,9 +132,9 @@ export default {
 
 							// 跳转到首页，用户信息传过去
 							// 在起始页面跳转到test.vue页面，并监听test.vue发送过来的事件数据
-							uni.redirectTo({
-								url: '/pages/main/main',
-							})
+							uni.switchTab({
+								url: '../profile/profile'
+							});
 
 						})
 				})
