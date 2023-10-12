@@ -49,7 +49,8 @@ export default {
 					password: ''
 				},
 			},
-			isRememberMe: true,
+			// 记住我
+			isRememberMe: false,
 			rules: {
 				'loginInfo.username': [{
 					type: 'string',
@@ -75,9 +76,20 @@ export default {
 		}
 	},
 	onLoad() {
-
 	},
-	onReady() { },
+	onReady() {
+		uni.getStorage({
+			key: 'zodo_loginInfo',
+			success: (res) => {
+				console.log(res.data)
+				this.$set(this.model1, 'loginInfo', {
+					username:res.data.username,
+					password:res.data.password
+				})
+				this.isRememberMe = res.data.isRememberMe
+			}
+		})
+	},
 	methods: {
 		// 切换显示密码
 		troggleShowPassword() {
@@ -86,7 +98,7 @@ export default {
 
 		// 记住我
 		changeRememberMe(e) {
-			console.log(e)
+			this.isRememberMe = e
 		},
 
 		// 登录
@@ -101,12 +113,22 @@ export default {
 							console.log(res)
 							uni.setStorage({
 								key: 'zodo_token',
-								data: res.token
+								data: res.data.token
 							});
-							uni.setStorage({
-								key: 'zodo_userInfo',
-								data: res.result
-							});
+							if (this.isRememberMe) {
+								const zodo_loginInfo = {
+									...this.model1.loginInfo,
+									isRememberMe: this.isRememberMe
+								}
+								uni.setStorage({
+									key: 'zodo_loginInfo',
+									data: zodo_loginInfo
+								})
+							} else {
+								uni.removeStorage({
+									key: 'zodo_loginInfo'
+								});
+							}
 						})
 				})
 				.catch(errors => {
