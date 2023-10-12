@@ -1,5 +1,5 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/login/index",
 			"style": {
@@ -7,10 +7,10 @@
 			}
 		}
 	    ,{
-            "path" : "pages/mian/mian",
+            "path" : "pages/main/main",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "首页",
+                "navigationBarTitleText": "智慧商户",
                 "enablePullDownRefresh": false
             }
             

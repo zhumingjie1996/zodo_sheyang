@@ -83,8 +83,8 @@ export default {
 			success: (res) => {
 				console.log(res.data)
 				this.$set(this.model1, 'loginInfo', {
-					username:res.data.username,
-					password:res.data.password
+					username: res.data.username,
+					password: res.data.password
 				})
 				this.isRememberMe = res.data.isRememberMe
 			}
@@ -110,7 +110,6 @@ export default {
 					loginInfo.userSource = "SELLER_SYSTEM"
 					return loginApi.login(loginInfo)
 						.then(res => {
-							console.log(res)
 							uni.setStorage({
 								key: 'zodo_token',
 								data: res.data.token
@@ -120,6 +119,7 @@ export default {
 									...this.model1.loginInfo,
 									isRememberMe: this.isRememberMe
 								}
+								// 记住密码
 								uni.setStorage({
 									key: 'zodo_loginInfo',
 									data: zodo_loginInfo
@@ -129,6 +129,13 @@ export default {
 									key: 'zodo_loginInfo'
 								});
 							}
+
+							// 跳转到首页，用户信息传过去
+							// 在起始页面跳转到test.vue页面，并监听test.vue发送过来的事件数据
+							uni.redirectTo({
+								url: '/pages/main/main',
+							})
+
 						})
 				})
 				.catch(errors => {
