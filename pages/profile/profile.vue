@@ -49,6 +49,7 @@ export default {
 	width: 100vw;
 	height: 100vh;
 	background-color: $zodo-main-color-1;
+	overflow: hidden;
 
 	.header {
 		position: absolute;
@@ -58,7 +59,6 @@ export default {
 		transform: translateY(-50%);
 		padding: 0 20px;
 		box-sizing: border-box;
-
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
