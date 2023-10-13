@@ -1,31 +1,49 @@
 <template>
 	<view class="homeContainer">
-		<view class="homeHeader">
-			<!-- 头部用户信息 -->
-			<view class="userInfo">
-				<view class="userInfo_left">
-					<view class="avatar">
-						<u-icon name="account-fill" size="20" color="#fff"></u-icon>
+		<u-transition :show="headerShow" mode="fade-down" :duration="1000">
+			<view class="homeHeader">
+				<!-- 头部用户信息 -->
+				<view class="userInfo">
+					<view class="userInfo_left">
+						<view class="avatar">
+							<u-icon name="account-fill" size="20" color="#fff"></u-icon>
+						</view>
+						<view class="nameAndPhone">
+							<span class="userName">欢迎，{{ userName }}</span>
+						</view>
 					</view>
-					<view class="nameAndPhone">
-						<span class="userName">欢迎，{{ userName }}</span>
+					<view class="userInfo_right">
+						<span>退出</span>
 					</view>
 				</view>
-				<view class="userInfo_right">
-					<span>退出</span>
+				<view class="enteranceList">
+					<view class="enteranceListItem" v-for="(item, index) in enteranceListInfo" :key="index">
+						<u-icon :name="item.iconName" size="50" color="#fff"></u-icon>
+						<span>{{ item.text }}</span>
+					</view>
 				</view>
 			</view>
-			<view class="enteranceList">
-				<view class="enteranceListItem" v-for="(item, index) in enteranceListInfo" :key="index">
-					<u-icon :name="item.iconName" size="50" color="#fff"></u-icon>
-					<span>{{ item.text }}</span>
-				</view>
-			</view>
-		</view>
+		</u-transition>
 		<view class="container">
-			<view class="module module-1"></view>
-			<view class="module module-2"></view>
-			<view class="module module-3"></view>
+			<view class="module module-1">
+				<view class="info">
+					<view class="infoItem" v-for="(item, index) in mainDataList" :key="index">
+						<span class="value">
+							<u-count-to :startVal="0" :endVal="item.value" color="#1b9b66" fontSize="30"
+								:bold="true"></u-count-to>
+						</span>
+						<span class="label">{{ item.label }}</span>
+					</view>
+				</view>
+			</view>
+			<view class="module module-2">
+				<view class="title"></view>
+				<view class="info">
+				</view>
+			</view>
+			<view class="module module-3">
+
+			</view>
 		</view>
 	</view>
 </template>
@@ -34,6 +52,7 @@
 export default {
 	data() {
 		return {
+			headerShow: true,
 			userName: '13900000000',
 			pageValue: 0,
 			enteranceListInfo: [{
@@ -48,7 +67,17 @@ export default {
 				text: '从业人员',
 				iconName: 'account',
 				toPath: ''
-			}]
+			}],
+			mainDataList: [
+				{
+					label: '待采样',
+					value: '100'
+				},
+				{
+					label: '不合格记录',
+					value: '55'
+				}
+			]
 		};
 	}
 
@@ -59,13 +88,10 @@ export default {
 @import '@/uni.scss';
 
 .homeContainer {
-	position: relative;
 	width: 100vw;
 
 	.homeHeader {
-		position: absolute;
-		left: 0;
-		top: 0;
+		position: relative;
 		height: 200px;
 		width: 100%;
 		background-image: linear-gradient(90deg, $zodo-main-color-2, $zodo-main-color-1);
@@ -157,6 +183,42 @@ export default {
 					font-size: 15px;
 					font-weight: 700;
 					letter-spacing: $zodo-letter-space;
+				}
+			}
+		}
+	}
+
+	.container {
+		.module {
+			width: 100%;
+			padding: 15px;
+			box-sizing: border-box;
+
+			.info {
+				background-color: #eee;
+				box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+				border-radius: 10px;
+			}
+		}
+
+		.module-1 {
+			.info {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-around;
+				padding: 15px;
+
+				.infoItem {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					.label {
+						color: #666666;
+						font-size: 12px;
+						letter-spacing: $zodo-letter-space;
+					}
 				}
 			}
 		}
