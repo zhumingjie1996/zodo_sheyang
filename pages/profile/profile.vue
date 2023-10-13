@@ -64,6 +64,30 @@ export default {
 		justify-content: space-between;
 		align-items: center;
 
+		&::before {
+			content: "";
+			position: absolute;
+			left: -100px;
+			top: -150px;
+			height: 200px;
+			width: 500px;
+			background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .3));
+			transform: rotateZ(-45deg);
+			z-index: 0;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 200px;
+			top: -100px;
+			height: 100px;
+			width: 500px;
+			background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .3));
+			transform: rotateZ(-45deg);
+			z-index: 0;
+		}
+
 		.header_left{
 			display: flex;
 			flex-direction: row;
