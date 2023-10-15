@@ -7,31 +7,31 @@
 			</view>
 			<span class="title">{{ title }}</span>
 		</view>
-		<view class="form">
-			<!-- 注意，如果需要兼容微信小程序，最好通过setRules方法设置rules规则 -->
-			<u--form labelPosition="top" :model="model1" ref="loginForm">
-				<text class="u-form-item__title">用户名</text>
-				<u-form-item prop="loginInfo.username" ref="login_userName">
-					<u-input placeholder="请输入用户名" border="bottom" clearable v-model="model1.loginInfo.username"></u-input>
-				</u-form-item>
-				<text class="u-form-item__title">密码</text>
-				<u-form-item prop="loginInfo.password" ref="login_password">
-					<u-input placeholder="请输入密码" :password="!isShowPassword" v-model="model1.loginInfo.password"
-						border="bottom">
-						<u-icon slot="suffix" :name="!isShowPassword ? 'eye-off' : 'eye-fill'" size="20"
-							color="rgba(198,199,203)" @click="troggleShowPassword"></u-icon>
-					</u-input>
-				</u-form-item>
-			</u--form>
-			<view style="margin-top: 30px;">
-				<u-checkbox-group>
-					<u-checkbox activeColor="#1b9b66" label="记住我" :checked="isRememberMe" @change="changeRememberMe">
-					</u-checkbox>
-				</u-checkbox-group>
+					<view class="form">
+				<!-- 注意，如果需要兼容微信小程序，最好通过setRules方法设置rules规则 -->
+				<u--form labelPosition="top" :model="model1" ref="loginForm">
+					<text class="u-form-item__title">用户名</text>
+					<u-form-item prop="loginInfo.username" ref="login_userName">
+						<u-input placeholder="请输入用户名" border="bottom" clearable v-model="model1.loginInfo.username"></u-input>
+					</u-form-item>
+					<text class="u-form-item__title">密码</text>
+					<u-form-item prop="loginInfo.password" ref="login_password">
+						<u-input placeholder="请输入密码" :password="!isShowPassword" v-model="model1.loginInfo.password"
+							border="bottom">
+							<u-icon slot="suffix" :name="!isShowPassword ? 'eye-off' : 'eye-fill'" size="20"
+								color="rgba(198,199,203)" @click="troggleShowPassword"></u-icon>
+						</u-input>
+					</u-form-item>
+				</u--form>
+				<view style="margin-top: 30px;">
+					<u-checkbox-group>
+						<u-checkbox activeColor="#1b9b66" label="记住我" :checked="isRememberMe" @change="changeRememberMe">
+						</u-checkbox>
+					</u-checkbox-group>
+				</view>
+				<view class="submitBtn" @click="doLogin">登录</view>
 			</view>
-			<view class="submitBtn" @click="doLogin">登录</view>
-		</view>
-	</view>
+			</view>
 </template>
 
 <script>
@@ -40,7 +40,7 @@ export default {
 	data() {
 		return {
 			title: '智慧商户',
-			// 是否显示密码
+						// 是否显示密码
 			isShowPassword: false,
 			// 用户名密码
 			model1: {
@@ -180,6 +180,7 @@ export default {
 				width: 100px;
 				background-color: #1cab69;
 				border-radius: 999px;
+				transform: rotateZ(30deg);
 			}
 
 			.icon2 {
