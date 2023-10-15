@@ -20,6 +20,87 @@
                 "enablePullDownRefresh": false
             }
         }
+        ,{
+            "path" : "pages/checkInfo/checkInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "检测信息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/approach/approach",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "进场申报",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/traceInfo/traceInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "溯源信息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/practitionerInfo/practitionerInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "从业人员",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/productionLibrary/productionLibrary",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品库",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/productionApplication/productionApplication",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/supplier/supplier",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "供应商",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/supplierApplication/supplierApplication",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "供应商申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/onlineTrain/onlineTrain",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "在线培训",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
     "tabBar": {
         "color": "#7A7E83",

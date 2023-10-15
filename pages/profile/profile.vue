@@ -22,8 +22,11 @@
 					</template>
 				</u-cell>
 			</view>
-			<view class="logOutBtn">退出登录</view>
+			<view class="logOutBtn" @click="logOut">退出登录</view>
 		</view>
+
+		<u-modal :show="showLogoutModal" @confirm="confirmLogout" @cancel="showLogoutModal = false" confirmColor="#1b9b66"
+			showCancelButton ref="uModal" :asyncClose="true" title="提示" content="是否确定退出登录？"></u-modal>
 	</view>
 </template>
 
@@ -32,11 +35,19 @@ export default {
 	data() {
 		return {
 			userName: '13900000000',
-			userPhone: '13900000000'
+			userPhone: '13900000000',
+			showLogoutModal: false
 		}
 	},
 	methods: {
-
+		logOut() {
+			this.showLogoutModal = true
+		},
+		confirmLogout() {
+			uni.redirectTo({
+				url: `/pages/login/index`
+			});
+		}
 	}
 }
 </script>
@@ -88,19 +99,19 @@ export default {
 			z-index: 0;
 		}
 
-		.header_left{
+		.header_left {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			gap: 20px;
 
-			.avatar{
+			.avatar {
 				border: 2px solid #fff;
 				border-radius: 100%;
 				padding: 5px;
 			}
 
-			.nameAndPhone{
+			.nameAndPhone {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-around;

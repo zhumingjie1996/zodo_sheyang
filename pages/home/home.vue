@@ -5,7 +5,7 @@
 				<view class="homeHeader">
 					<!-- 头部用户信息 -->
 					<view class="userInfo">
-						<view class="userInfo_left">
+						<view class="userInfo_left" @click="switchTab('profile')">
 							<view class="avatar">
 								<u-icon name="account-fill" size="20" color="#fff"></u-icon>
 							</view>
@@ -13,12 +13,13 @@
 								<span class="userName">欢迎，{{ userName }}</span>
 							</view>
 						</view>
-						<view class="userInfo_right">
+						<view class="userInfo_right" @click="logOut">
 							<span style="font-weight: 700;">退出</span>
 						</view>
 					</view>
 					<view class="enteranceList">
-						<view class="enteranceListItem" v-for="(item, index) in enteranceListInfo" :key="index">
+						<view class="enteranceListItem" v-for="(item, index) in enteranceListInfo" :key="index"
+							@click="navigateTo(item.toPath)">
 							<u-icon :name="item.iconName" size="40" color="#fff"></u-icon>
 							<span>{{ item.text }}</span>
 						</view>
@@ -46,7 +47,7 @@
 			</view>
 			<view class="module module-2">
 				<!-- <view class="title">采购管理</view> -->
-				<view class="info">
+				<view class="info" @click="navigateTo('approach')">
 					<view class="infoLeft">
 						<view style="font-size: 18px; font-weight: 700; display: flex;gap: 5px;"><span>进场申报</span><u-icon
 								name="arrow-right" color="#fff"></u-icon></view>
@@ -54,7 +55,7 @@
 					</view>
 					<view class="infoRight">
 						<u-image class="icon" width="100px" height="150px"
-							:src="require('../../static/onlineClass.png')"></u-image>
+							:src="require('../../static/approachICon.png')"></u-image>
 					</view>
 				</view>
 			</view>
@@ -93,11 +94,11 @@
 							</view>
 						</view>
 						<view class="infoRight">
-							<view class="rightBtn">
+							<view class="rightBtn" @click="navigateTo('productionLibrary')">
 								<span class="label">商品库</span>
 								<u-icon name="arrow-right" color="#fff"></u-icon>
 							</view>
-							<view class="rightBtn">
+							<view class="rightBtn" @click="navigateTo('productionApplication')">
 								<span class="label">商品申请</span>
 								<u-icon name="arrow-right" color="#fff"></u-icon>
 							</view>
@@ -134,11 +135,11 @@
 							</view>
 						</view>
 						<view class="infoRight">
-							<view class="rightBtn">
+							<view class="rightBtn" @click="navigateTo('supplier')">
 								<span class="label">供应商</span>
 								<u-icon name="arrow-right" color="#fff"></u-icon>
 							</view>
-							<view class="rightBtn">
+							<view class="rightBtn" @click="navigateTo('supplierApplication')">
 								<span class="label">供应商申请</span>
 								<u-icon name="arrow-right" color="#fff"></u-icon>
 							</view>
@@ -147,7 +148,7 @@
 				</u-transition>
 			</view>
 			<view class="module module-5">
-				<view class="info">
+				<view class="info" @click="navigateTo('onlineTrain')">
 					<view class="infoLeft">
 						<view style="font-size: 18px; font-weight: 700; display: flex;gap: 5px;"><span>在线培训</span><u-icon
 								name="arrow-right" color="#fff"></u-icon></view>
@@ -155,13 +156,16 @@
 					</view>
 					<view class="infoRight">
 						<u-image class="icon" width="100px" height="150px"
-							:src="require('../../static/approachICon.png')"></u-image>
+							:src="require('../../static/onlineClass.png')"></u-image>
 					</view>
 				</view>
 			</view>
 		</view>
+
+		<u-modal :show="showLogoutModal" @confirm="confirmLogout" @cancel="showLogoutModal=false" confirmColor="#1b9b66" showCancelButton ref="uModal"
+			:asyncClose="true" title="提示" content="是否确定退出登录？"></u-modal>
 	</view>
-</template>
+</view></template>
 
 <script>
 export default {
@@ -173,15 +177,15 @@ export default {
 			enteranceListInfo: [{
 				text: '检测信息',
 				iconName: 'order',
-				toPath: ''
+				toPath: 'checkInfo'
 			}, {
 				text: '溯源信息',
 				iconName: 'attach',
-				toPath: ''
+				toPath: 'traceInfo'
 			}, {
 				text: '从业人员',
 				iconName: 'account',
-				toPath: ''
+				toPath: 'practitionerInfo'
 			}],
 			mainDataList: [
 				{
@@ -201,12 +205,35 @@ export default {
 					name: '供应商'
 				}
 			],
-			current: 0
+			current: 0,
+			showLogoutModal: false
 		};
 	},
 	methods: {
+		logOut() {
+			this.showLogoutModal = true
+		},
 		subsectionChange(e) {
 			this.current = e
+		},
+		// 页面跳转(非tabber页面)
+		navigateTo(path) {
+			uni.navigateTo({
+				url: `/pages/${path}/${path}`
+			});
+		},
+
+		// 页面跳转(tabber页面)
+		switchTab(path) {
+			uni.switchTab({
+				url: `/pages/${path}/${path}`
+			})
+		},
+
+		confirmLogout() {
+			uni.redirectTo({
+				url: `/pages/login/index`
+			});
 		}
 	}
 
@@ -240,17 +267,17 @@ export default {
 			z-index: 0;
 		}
 
-		&::after {
-			content: "";
-			position: absolute;
-			left: 200px;
-			top: -100px;
-			height: 100px;
-			width: 500px;
-			background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .3));
-			transform: rotateZ(-45deg);
-			z-index: 0;
-		}
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	left: 200px;
+		// 	top: -100px;
+		// 	height: 100px;
+		// 	width: 500px;
+		// 	background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .3));
+		// 	transform: rotateZ(-45deg);
+		// 	z-index: 0;
+		// }
 
 		.userInfo {
 			width: 100%;
@@ -302,6 +329,7 @@ export default {
 
 			.enteranceListItem {
 				height: 100%;
+				min-width: 50px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
