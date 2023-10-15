@@ -37,6 +37,12 @@
 						<span class="label">{{ item.label }}</span>
 					</view>
 				</view>
+				<view class="icon iconLeft">
+					<u-image width="80px" height="80px" :src="require('../../static/sampling.png')"></u-image>
+				</view>
+				<view class="icon iconRight">
+					<u-image width="80px" height="80px" :src="require('../../static/unqualified.png')"></u-image>
+				</view>
 			</view>
 			<view class="module module-2">
 				<!-- <view class="title">采购管理</view> -->
@@ -58,7 +64,7 @@
 						@change="subsectionChange"></u-subsection>
 				</view>
 				<!-- 商品库 -->
-				<u-transition :show="current === 0" mode="slide-left" :duration="200">
+				<u-transition :show="current === 0" mode="slide-left" :duration="500">
 					<view class="info" v-if="current === 0">
 						<view class="infoLeft">
 							<view class="barItem">
@@ -99,7 +105,7 @@
 					</view>
 				</u-transition>
 				<!-- 供应商 -->
-				<u-transition :show="current === 1" mode="slide-right" :duration="200">
+				<u-transition :show="current === 1" mode="slide-right" :duration="500">
 					<view class="info" v-if="current === 1">
 						<view class="infoLeft">
 							<view class="barItem">
@@ -327,25 +333,32 @@ export default {
 			}
 
 			.info {
-				background-color: #eee;
+				// background-color: #eee;
+				background-image: linear-gradient(90deg, #eee, #f7f7f7);
 				box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
 				border-radius: 10px;
 			}
 		}
 
 		.module-1 {
+			position: relative;
 
 			.info {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				justify-content: space-around;
+				justify-content: center;
+				gap: 80px;
 				padding: 15px;
+				overflow: visible;
 
 				.infoItem {
+					position: relative;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					overflow: visible;
+					min-width: 20%;
 
 					.label {
 						color: #666666;
@@ -353,6 +366,21 @@ export default {
 						letter-spacing: $zodo-letter-space;
 					}
 				}
+			}
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity: .08;
+			}
+
+			.iconLeft {
+				left: 50px;
+			}
+
+			.iconRight {
+				right: 50px;
 			}
 		}
 
@@ -447,8 +475,8 @@ export default {
 							display: flex;
 							justify-content: space-between;
 
-							span{
-								&:nth-child(2){
+							span {
+								&:nth-child(2) {
 									font-weight: 700;
 								}
 							}
